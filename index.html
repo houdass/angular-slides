@@ -45,29 +45,33 @@
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
         <section>
+            <img src="assets/logos/angular.png" class="heart" width="200" style="background: none; border:none; box-shadow:none;"/>
+
+            <h1>Angular</h1>
+            <p>
+                <small>Présenté par: <a href="http://houdass.com">Youness Houdass</a></small>
+            </p>
+            <p>
+                <a href="http://angular.io/">http://angular.io/</a>
+            </p>
+        </section>
+        <section>
             <section>
-              <img src="assets/logos/angular.png" class="heart" width="200" style="background: none; border:none; box-shadow:none;"/>
-               
-                <h1>Angular</h1>
-                <p>
-                    <small>Présenté par: <a href="http://houdass.com">Youness Houdass</a></small>
-                </p>
-               <p>
-                    <a href="http://angular.io/">http://angular.io/</a>
-                </p>
+                <h2>1. Qu'est ce que angular?</h2>
+                <img src="assets/angular/5.gif" width="500"/>
             </section>
             <section>
-                <h2>Qu'est ce que angular?</h2>
+                <p>Angular est un framework qui permet de créer des applications clientes web, il est aussi utilisé pour la création d’application mobile, notamment avec Ionic.</p>
             </section>
             <section>
-                <p>Angular est un framework qui permet de créer des applications clientes web. Il est aussi utilisé pour la création d’application mobile, notamment avec Ionic.</p>
+                <p>Angular permet de créer des applications SPA (single page application).</p>
             </section>
             <section>
-                <p>Le terme AngularJS désigne la version 1.x.x du framework, et les versions supérieures ou égale à 2 sont nommées simplement Angular, il permet de créer des applications SPA (single page application).</p>
-            </section>
-            <section>
-                <p>Si vous connaissez AngularJS (Angular 1.x), vous pensez peut-être qu’Angular2 est une upgrade d’AngularJS. En réalité, Angular2 a été totalement réécrit par Google, ce qui en fait un nouveau framework à part entière, avec une philosophie et des concepts propres à lui..</p>
+                <p>Si vous connaissez AngularJS (Angular 1.x), vous pensez peut-être qu’Angular2 est une upgrade d’AngularJS. En réalité, Angular2 a été totalement réécrit par Google, ce qui en fait un nouveau framework à part entière, avec une philosophie et des concepts propres à lui.</p>
                 <img src="assets/angular/1.gif" width="500"/>
+            </section>
+            <section>
+                <p>Le terme AngularJS désigne la version 1.x.x du framework, et les versions supérieures ou égale à 2 sont nommées simplement Angular.</p>
             </section>
             <section>
                 <h4>
@@ -98,158 +102,105 @@
             <section>
                 <h3>Avantages</h3>
                 <ul>
-                    <li>des performances améliorées</li>
-                    <li>une modularité accrue / du code plus expressif</li>
-                    <li>un respect des nouveaux standards du web</li>
+                    <li>Des performances améliorées</li>
+                    <li>Une modularité accrue / du code plus expressif</li>
+                    <li>Un respect des nouveaux standards du web</li>
                 </ul>
             </section>
+        </section>
+
+        <section>
             <section>
-                <h3>Or even...</h3>
-                <p>
-                    ...<a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a>?
-                </p>
-                <img src="assets/octocats/grim-repo.jpg" width="500"/>
-                <p>
-                    <small>Fact #4: GitHub (optionally) adds an issue tracker, wiki and project page to each repository.</small>
-                </p>
+                <h2>2. Angular CLI</h2>
             </section>
             <section>
-                <h3>Or seriously...</h3>
+                <img src="assets/angular/6.svg" width="400" style="background: none; border:none; box-shadow:none;"/>
                 <p>
-                    ...no version control system at all?
+                    "The CLI is a geart tool for big and very big Angular projects! It allows to focus on Angular code instead of workflow tasks."
                 </p>
-                <img src="assets/octocats/nyantocat.gif" width="500"/>
                 <p>
-                    <small>Fact #5: Repository statistics and social extras like Feeds, Followers &amp; Favorites are part of GitHub.</small>
+                    Google nous propose un outil clé en main pour réaliser les tâches de développement les plus courantes. Ce projet est basé sur le projet Open Source ember CLI, qui a maintenant plus de trois ans. Grâce à notre Angular Cli, il est possible de :
+                <ul>
+                    <li>Créer une application from scratch via un scaffolding</li>
+                    <li>Générer des squelettes des composants type Components…</li>
+                    <li>Builder un projet</li>
+                    <li>Lancer des tests de End-to-End (E2E) ou unitaires</li>
+                    <li>Et beaucoup d'autres choses…</li>
+                </ul>
+                </p>
+            </section>
+        </section>
+        <section>
+            <h2>3. Setup du projet via Angular CLI</h2>
+            <p>
+                <ul>
+                    <li>npm i -g @angular/cli</li>
+                    <li>ng new my-dream-app</li>
+                    <li>ng new my-dream-app --style=scss|sass</li>
+                    <li>cd my-dream-app</li>
+                    <li>ng serve</li>
+                </ul>
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Ajouter bootstrap au projet</h2>
+            <p>
+            <ul>
+                <li>npm i -S bootstrap@3.3.7</li>
+                <li>Ouvrir le fichier .angular-cli.json</li>
+                <li>Au niveau du noeud <strong>styles</strong> ajouter : ../node_modules/bootstrap/dist/css/bootstrap.min.css</li>
+            </ul>
+            </p>
+        </section>
+
+        <section>
+            <section>
+                <h2>5. Les selectors (composants)</h2>
+            </section>
+
+            <section>
+                <p>
+                <ul>
+                    <li>
+                        selector: 'app-users'
+                        <xmp style="color: #6cc644;"><app-users></app-users></xmp>
+                    </li>
+                    <li>
+                        selector: '.app-users'
+                        <xmp style="color: #6cc644;"><div class="app-users"></div></xmp>
+                    </li>
+                    <li>
+                        selector: '[app-users]'
+                        <xmp style="color: #6cc644;"><div app-users></div></xmp>
+                    </li>
+                </ul>
                 </p>
             </section>
         </section>
 
         <section>
             <section>
-                <h2>WebHooks & Service Hooks</h2>
-                <p>
-                    Individual &amp; Third Party Service Integration
-                </p>
-                <img src="assets/service-tagcat.png" width="400" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://developer.github.com/webhooks">https://developer.github.com/webhooks</a>
-                </p>
-                <p>
-                    <a href="https://github.com/github/github-services">https://github.com/github/github-services</a>
-                </p>
+                <h2>6. Databinding</h2>
+                <img src="assets/angular/3.gif" width="400" style="background: none; border:none; box-shadow:none;"/>
             </section>
             <section>
-                <h3>Wait a moment! What are <a href="https://webhooks.pbworks.com/w/page/13385124/FrontPage">WebHooks</a>?</h3>
                 <p>
-                    Simply put: User-defined <code>HTTP</code> callbacks.
-                </p>
-                <img src="assets/logos/webhooks.png" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <small>More specifically: <code>HTTP POST</code>s that occur when something happens. So basically a simple event-notification via <code>HTTP POST</code>.</small>
-                </p>
-            </section>
-            <section>
-                <h3>WebHooks on GitHub</h3>
                 <ul>
-                    <li>Subscription to events on GitHub.com</li>
-                    <li>Used to integrate individual applications or tools</li>
-                    <li>Installation on <a href="https://developer.github.com/v3/orgs/hooks/">organization</a> or <a href="https://developer.github.com/v3/repos/hooks/">repository level</a></li>
-                    <li>Types &amp; payloads mirror the <a href="https://developer.github.com/v3/activity/events/types/">Event API</a></li>
+                    <li>
+                        <span style="color: #6cc644;">String interpolation</span> {{ data }}
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Property binding</span> [property]="data" or bind-property="data", for example: <xmp><button [disabled]="isDisabled"> ...</button></xmp>
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Event Binding </span> (event)="callback()" or on-click="callback()", for example: <xmp><button (click)="onClick()"></button></xmp>
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Two-way binding </span> (Banana in the box) [(data)]
+                    </li>
                 </ul>
-                <p></p>
-                <div id="webHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-            </section>
-            <section>
-                <h3>Service Hooks on GitHub</h3>
-                <ul>
-                    <li>Service Hooks can only be installed on repositories</li>
-                    <li>Only one Service Hook per integrator</li>
-                    <li>Supported events depend on service implementation</li>
-                    <li>Services come with their own unique configuration</li>
-                </ul>
-                <p></p>
-                <div id="serviceHooksDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-            </section>
-            <section>
-                <h3>Account Level Integration</h3>
-                <ul>
-                    <li>Close integration with GitHub by demanding repo or account access</li>
-                    <li>Do not require any manual setup by the user on the GitHub page</li>
-                    <li>Configured by the service provider via its own user interface</li>
-                </ul>
-                <p></p>
-                <div id="accountIntegrationDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-            </section>
-            <section>
-                <h3>Integration Chain</h3>
-                <ul>
-                    <li>3rd party does not integrate directly with GitHub</li>
-                    <li>Instead integration with APIs of other service providers</li>
-                    <li>Very useful in Continuous Integration context. Example:</li>
-                </ul>
-                <p></p>
-                <div id="serviceChainDiagram" style="background: rgba(255, 255, 255, 0.5)"></div>
-            </section>
-            <section>
-                <h3>What way of Integration should I use?</h3>
-                <ul>
-                    <li><strong>GitHub recommends WebHooks</strong> for all new integrations</li>
-                    <li>If required use <a href="https://developer.github.com/v3/oauth/">OAuth</a> to manage authorization</li>
-                    <li>The existing <a href="https://github.com/github/github-services">github-service repo</a> is not accepting any new services</li>
-                </ul>
-                <img src="assets/octocats/electrocat.png" height="400"/>
-            </section>
-            <section>
-                <h3>Adding a WebHook to a repository</h3>
-                <img src="assets/screenshots/webhook01.png"/>
-            </section>
-            <section>
-                <h3>Repository WebHook Event Types</h3>
-                <img src="assets/screenshots/webhook02.png"/>
-                <p>
-                    <small>
-                        Organization WebHooks send events for all repositories in that organization. New events for repository creation and team membership are also available on organization-level.
-                    </small>
                 </p>
-            </section>
-        </section>
-
-        <section>
-            <section>
-                <h3>Service Hook example: Twitter</h3>
-                <img src="assets/logos/Twitter_logo_white.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-            </section>
-            <section>
-                <h3>WebHooks &amp; Services in Settings menu</h3>
-                <img src="assets/screenshots/twitter01.png"/>
-            </section>
-            <section>
-                <h3>Adding Twitter as a Service</h3>
-                <img src="assets/screenshots/twitter02.png"/>
-            </section>
-            <section>
-                <h3>The Twitter Service configuration</h3>
-                <img src="assets/screenshots/twitter03.png"/>
-            </section>
-            <section>
-                <h3>Authorizing GitHub to send tweets</h3>
-                <img src="assets/screenshots/twitter04.png"/>
-            </section>
-            <section>
-                <h3>Setting tweet format and trigger branch</h3>
-                <img src="assets/screenshots/twitter05.png"/>
-            </section>
-            <section>
-                <h3>Sending a test payload</h3>
-                <img src="assets/screenshots/twitter06.png"/>
-                <p>
-                    <small>The Test Service function triggers <strong>the real Service</strong> once for the most recent commit!</small>
-                </p>
-            </section>
-            <section>
-                <h3>The published <code>push</code> notification tweet</h3>
-                <img src="assets/screenshots/twitter07.png"/>
             </section>
         </section>
 
