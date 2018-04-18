@@ -205,76 +205,47 @@
         </section>
 
         <section>
-            <h2>The Showcase Repositories</h2>
-            <img src="assets/octocats/repo.png" width="500" style="background: rgba(255, 255, 255, 0.5)"/>
+            <h2>*ngIf / else condition</h2>
+            <ul>
+                <li><xmp style="color: #6cc644;"><p *ngIf="isVisible; else noCondition">This is true</p></xmp></li>
+                <li><xmp style="color: #6cc644;"><ng-template #noCondition><p>This is false<p></ng-template></xmp></li>
+            </ul>
         </section>
         <section>
-            <section>
-                <h2>Kata TCG</h2>
-                <p>
-                    Code Kata for a two-player trading card game loosely based on Hearthstone - Heroes of Warcraft
-                </p>
-                <img src="assets/logos/kata-tcg_logo.png"/>
-                <p>
-                    <a href="https://github.com/bkimminich/kata-tcg">https://github.com/bkimminich/kata-tcg</a>
-                </p>
-            </section>
-            <section>
-                <h3>Sample Implementations</h3>
-                <ul>
-                    <li>Java (JUnit, Hamcrest, Mockito)</li>
-                    <li>Groovy (Spock)</li>
-                    <li>Javascript (Karma, Jasmine)</li>
-                    <li>Clojure (work in progress...)</li>
-                </ul>
-                <br>
-                <img src="assets/logos/java8_logo.png" height="150" style="background: none; border:none; box-shadow:none;"/>
-                <img src="assets/logos/2000px-Groovy-logo.svg.png" height="150" style="background: none; border:none; box-shadow:none;"/>
-                <img src="assets/logos/Unofficial_JavaScript_logo_2.svg.png" height="150" style="background: none; border:none; box-shadow:none;"/>
-                <img src="assets/logos/512px-Clojure-glyph.svg.png" height="150" style="background: none; border:none; box-shadow:none;"/>
-            </section>
-            <section>
-                <h3>Polyglot Build</h3>
-                <p>
-                    Multi-module <a href="http://www.gradle.org/">Gradle</a> build using language specific plugins to build & test all sample implementations in one execution.
-                </p>
-                <img src="assets/logos/gradle.png" style="background: none; border:none; box-shadow:none;"/>
-            </section>
+            <h2>*ngFor / index</h2>
+            <ul>
+                <li><xmp style="color: #6cc644;"><p *ngFor="let item of items; let i = index">{{i}} - {{item.name}}</p></xmp></li>
+                <li>Or, <xmp style="color: #6cc644;"><p *ngFor="let item of items; index as i">{{i}} - {{item.name}}</p></xmp></li>
+            </ul>
         </section>
         <section>
-            <section>
-                <h2>Juice Shop</h2>
-                <p>
-                    An intentionally insecure Javascript Web Application
-                </p>
-                <img src="assets/logos/JuiceShop_Logo.svg" width="300" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="http://bkimminich.github.io/juice-shop/">http://bkimminich.github.io/juice-shop/</a>
-                </p>
-            </section>
-            <section>
-                <h3>Technology Stack</h3>
-                <img src="assets/logos/bootstrap-solid.svg" height="150" style="background: none; border:none; box-shadow:none;"/>
-                <img src="assets/logos/AngularJS-Shield-medium.png" height="150" style="background: none; border:none; box-shadow:none;"/>
-                <br>
-                <img src="assets/logos/nodejs.svg" height="150" style="background: none; border:none; box-shadow:none;"/>
-                <img src="assets/logos/express.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                <br>
-                <img src="assets/logos/SQLite370.svg.png" height="150" style="background: none; border:none; box-shadow:none;"/>
-                <img src="assets/logos/sequelize.png" height="150" style="background: none; border:none; box-shadow:none;"/>
-            </section>
-            <section>
-                <h3>Build Setup</h3>
-                <img src="assets/logos/Bower-logo.svg.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                <img src="assets/logos/npm-logo.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                <img src="assets/logos/grunt-logo-no-wordmark.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                <br>
-                <img src="assets/logos/protractor-favicon64.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                <img src="assets/logos/karma.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-                <br>
-                <img src="assets/logos/jasmine-horizontal.svg" height="100" style="background: none; border:none; box-shadow:none;"/>
-                <img src="assets/logos/logo-frisby.png" height="100" style="background: none; border:none; box-shadow:none;"/>
-            </section>
+            <h2>Encapsulation</h2>
+            <ul>
+                <li>
+                    <span style="color: #6cc644;">encapsulation: ViewEncapsulation.Emulated</span> Pas de shadow DOM, mais une émulation du Shadow DOM. C'est le comportement par défaut.
+                </li>
+                <li>
+                    <span style="color: #6cc644;">encapsulation: ViewEncapsulation.Native </span> Utilisation du véritable shadow DOM. Superbe sur Chrome, mais cela s'arrête là pour le moment. Ni Safari, ni Firefox ne supporte ce mécanisme.
+                </li>
+                <li>
+                    <span style="color: #6cc644;">encapsulation: ViewEncapsulation.None </span> Ni shadow DOM, ni aucun mécanisme d'encapsulation de style CSS.
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Input/Output</h2>
+            <ul>
+                <li>
+                    <span style="color: #6cc644;">@Input</span>
+                </li>
+                <li>
+                    <span style="color: #6cc644;">@Output</span>
+                </li>
+                <li>
+                    Quand @Input se charge de recevoir une valeur, @Output se charge, lui, d'envoyer une donnée.
+                </li>
+            </ul>
+            <img src="assets/angular/7.png" width="400" style="background: none; border:none; box-shadow:none;"/>
         </section>
 
         <section>
