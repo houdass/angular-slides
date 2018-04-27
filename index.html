@@ -249,81 +249,108 @@
         </section>
 
         <section>
-            <!--<h2>15 valuable GitHub Services</h2>-->
-            <h2>13 valuable GitHub Services</h2>
-            <p>in practical use in <a href="https://github.com/bkimminich/kata-tcg">kata-tcg</a> &amp; <a href="https://github.com/bkimminich/juice-shop">juice-shop</a></p>
-            <img src="assets/octocats/benevocats.png" width="500" style="background: rgba(255, 255, 255, 0.5)"/>
-        </section>
-        <section>
-            <h2>Notifications</h2>
-            <img src="assets/octocats/supportcat.png" width="400" style="background: rgba(255, 255, 255, 1)"/>
+            <h2>Template reference variables</h2>
+            <p>Les variables référence de template (ou template reference variables) permettent d’accéder à un élément DOM ou un composant Angular via une variable déclarée directement sur la balise de cet élément ou de ce composant avec la syntaxe #var ou ref-var.</p>
         </section>
         <section>
             <section>
-                <h3>NMA</h3>
-                <p>
-                    Platform for delivering push notifications from virtually any application to an Android device.
-                </p>
-                <img src="assets/logos/nma_logo.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="http://www.notifymyandroid.com/">http://www.notifymyandroid.com/</a>
-                </p>
+                <h2>Hooks (Le cycle de vie d’un Component)</h2>
+                <p>Pour ceux qui ne connaissent pas le terme de cycle de vie, il s'agit simplement de la définition de toutes les étapes de la naissance du Component à sa mort.</p>
+                <img src="assets/angular/8.png" width="300" style="background: none; border:none; box-shadow:none;"/>
             </section>
             <section>
-                <h3>Install free* NMA Android App</h3>
-                <img src="assets/screenshots/nma02.png"/>
+                <h3>ngOnChanges</h3>
                 <p>
-                    <small>*The number of receivable notifications per day is limited. Unlimited premium account available via in-app purchase.</small>
+                    Se lance lorsqu'Angular modifie une des propriétés du Component / directive suite à un Property Binding <span style="color: #6cc644;">@Input</span>. La méthode reçoit un object SimpleChanges contenant les valeurs courantes et précédentes.
+
+                    Il est lancé avant <span style="color: #6cc644;">ngOnInit</span> et à chaque fois qu'une ou plusieurs propriétés précédées de <span style="color: #6cc644;">@Input</span> change.
                 </p>
             </section>
             <section>
-                <h3>Generate API Keys for each Notifier</h3>
-                <img src="assets/screenshots/nma01.png"/>
-            </section>
-            <section>
-                <h3>Enter API Key in NMA Service config</h3>
-                <img src="assets/screenshots/nma04.png"/>
-                <p>
-                    <small>For convenience you can use the same API Key for all your GitHub repositories.</small>
+                <h3>ngOnInit</h3>
+                <p>Initialise le component / directive après qu'Angular ait valorisé les Property Binding <span style="color: #6cc644;">@Input</span>. Il n'est lancé qu'une seule fois après le premier .
                 </p>
             </section>
             <section>
-                <h3>Notification on every <code>push</code> to GitHub</h3>
-                <img src="assets/screenshots/nma03.png"/>
+                <h3>ngDoCheck</h3>
+                <p>Détecte et agit sur les changements qu'Angular ne peut ou ne pourra pas détecter lui même. Il permet, en outre, de vérifier les changements dans les directives additionnelement aux algorithmes classiques. Il est appelé immédiatement après <span style="color: #6cc644;">ngOnChanges</span> et <span style="color: #6cc644;">ngOnInit</span>.</p>
+            </section>
+            <section>
+                <h3>ngAfterContentInit</h3>
+                <p>Il se lance également après l'initialisation d'un Content (ng-content). A partir de ce moment, les propriétés initialisées par <span style="color: #6cc644;">@ContentChild</span> et <span style="color: #6cc644;">@ContentChildren</span> sont valorisées.
+
+                    Il n' est appelé qu'une fois après le premier <span style="color: #6cc644;">ngDoCheck</span>. </p>
+            </section>
+            <section>
+                <h3>ngAfterContentChecked</h3>
+                <p>Se lance après le check du Content.</p>
+            </section>
+            <section>
+                <h3>ngAfterViewInit</h3>
+                <p>Se lance après qu'Angular initialise la vue (template) du Component et les vues enfants. A partir de ce moment, les propriétés initialisées <span style="color: #6cc644;">@ViewChild</span> et <span style="color: #6cc644;">@ViewChildren</span> sont valorisées
+
+                    Il n'est appelé qu'une seule fois après <span style="color: #6cc644;">ngAfterContentChecked</span>.</p>
+            </section>
+            <section>
+                <h3>ngAfterViewChecked</h3>
+                <p>Se lance après le check de la vue (template)</p>
+            </section>
+            <section>
+                <h3>ngOnDestroy</h3>
+                <p>Se lance juste avant qu'Angular ne détruise le Component / directive. C'est l'endroit idéal pour desinscrire les Observables et détacher les évènements afin d'éviter les fuites mémoires.
+
+                    Il est appelé qu'une seule fois avant la destruction du Component / directive.</p>
             </section>
         </section>
         <section>
             <section>
-                <h3>Amazon SNS</h3>
+                <h3>Directives</h3>
                 <p>
-                    <strong>S</strong>imple <strong>N</strong>otification <strong>S</strong>ervice enables applications, end-users, and devices to instantly send and receive notifications from the cloud.
-                </p>
-                <img src="assets/logos/SimpleIcon_SNS.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns/</a>
+                    Les Components sont des directives à la seule différence qu'ils possèdent une fonctionnalité de templating. En TypeScript, une directive est une classe à laquelle on applique le décorateur <span style="color: #6cc644;">@Directive</span>.
                 </p>
             </section>
             <section>
-                <h3>Create global topic in SNS Dashboard</h3>
-                <img src="assets/screenshots/sns01.png"/>
+                <p>Il existe deux sortes de directives :</p>
+                <p>Les directives structurelles : Elles ont pour but de modifier le DOM en ajoutant, enlevant ou replaçant un élément du DOM.
+                        Les attribute directives : Elles ont pour but de modifier l'apparence ou le comportement d'un élément.</p>
+
             </section>
             <section>
-                <h3>Create Subscriber for SNS Topic</h3>
-                <img src="assets/screenshots/sns02.png"/>
-            </section>
-            <section>
-                <h3>Configure SNS Service in GitHub</h3>
-                <img src="assets/screenshots/sns03.png"/>
+                <h3>ElementRef</h3>
                 <p>
-                    <small>For convenience you can use the same SNS Topic for all your GitHub repositories.</small>
+                    <ul>
+                        <li><p appBasicHighlight>App Basic Highlight Example</p></li>
+                        <li><pre>constructor(private elementRef: ElementRef) {}</pre></li>
+                        <li><pre>ngOnInit() { this.elementRef.nativeElement.style.backgroundColor = 'green'; }</pre></li>
+                    </ul>
                 </p>
             </section>
             <section>
-                <h3>Receiving sexy* JSON email on a <code>push</code></h3>
-                <img src="assets/screenshots/sns04.png"/>
-                <p>
-                    <small>*If you're not so much into JSON I'm sure you'll find a WebHook subscriber that is...</small>
-                </p>
+                <h3>Renderer</h3>
+                <ul>
+                    <li><pre>constructor(private elRef: ElementRef, private renderer: Renderer2) {}</pre></li>
+                    <li><pre>ngOnInit() { this.renderer.setStyle(this.elRef.nativeElement, 'backgroundColor', 'blue'); }</pre></li>
+                </ul>
+            </section>
+            <section>
+                <h3>@HostBinding</h3>
+                <ul>
+                    <li><pre>@HostBinding('style.backgroundColor') backgroundColor;</pre></li>
+                    <li><pre>ngOnInit() { this.backgroundColor = 'blue'; }</pre></li>
+                </ul>
+                </ul>
+            </section>
+            <section>
+                <h3>@HostListener</h3>
+                <pre>@HostListener('mouseenter') mouseenter(eventData: Event) { this.backgroundColor = this.highlightColor; }</pre>
+            </section>
+            <section>
+                <h3>@Input</h3>
+                <ul>
+                    <li>@Input() highlightColor = 'transparent';</li>
+                    <li><xmp style="color: #6cc644;"><p appBetterHighlight [highlightColor]="'blue'">Highlight Directive</p></xmp></li>
+                    <li>ou bien, <xmp style="color: #6cc644;"><p appBetterHighlight highlightColor="blue">Highlight Directive</p></xmp></li>
+                </ul>
             </section>
         </section>
 
@@ -830,27 +857,12 @@
 
         <section>
             <section>
-                <h1>Thanks for your attention!</h1>
-                <h3>by <span style="background: rgba(103, 103, 103, 1)">&nbsp;Björn&nbsp;</span><span style="background: rgba(244, 129, 66, 1)">&nbsp;Kimminich&nbsp;</span> / kimminich.de</h3>
-                <p>
-                    These slides are publicly available on <a href="https://github.com/bkimminich/github-service-universe">GitHub</a> and <a href="http://www.slideshare.net/BjrnKimminich/exploring-the-github-service-universe">Slideshare</a>.
-                </p>
+                <h1>Merci de votre attention!</h1>
+                <h3>by <span style="background: rgba(103, 103, 103, 1)">&nbsp;Youness&nbsp;</span><span style="background: rgba(244, 129, 66, 1)">&nbsp;Houdass&nbsp;</span> / houdass.com</h3>
             </section>
             <section>
                 <h1>Q&amp;A</h1>
-                <img src="assets/octocats/riddlocat.png" width="400" style="background: none; border:none; box-shadow:none;"/>
-            </section>
-            <section>
-                <h2>Credits</h2>
-                <ul>
-                    <li><a href="http://lab.hakim.se/reveal-js">reveal.js</a> - The HTML Presentation Framework</li>
-                    <li><a href="http://bramp.github.io/js-sequence-diagrams/">js-sequence-diagrams</a> - Turns text into UML sequence diagrams</li>
-                    <li><a href="https://octodex.github.com/">GitHub Octodex</a> - The official Octocat gallery</li>
-                </ul>
-                <hr>
-                <p>
-                    <small>Copyright (c) 2015 Björn Kimminich</small>
-                </p>
+                <img src="assets/angular/6.gif" width="400" style="background: none; border:none; box-shadow:none;"/>
             </section>
         </section>
 
