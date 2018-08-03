@@ -61,21 +61,21 @@
                 <img src="assets/angular/5.gif" width="500"/>
             </section>
             <section>
-                <p>Angular est un framework qui permet de créer des applications clientes web, il est aussi utilisé pour la création d’application mobile, notamment avec Ionic.</p>
+                <p>Angular est une plateforme de développement qui permet de créer des applications clientes web, il est aussi utilisé pour la création d’application mobile, notamment avec Ionic.</p>
             </section>
             <section>
                 <p>Angular permet de créer des applications SPA (single page application).</p>
             </section>
             <section>
-                <p>Si vous connaissez AngularJS (Angular 1.x), vous pensez peut-être qu’Angular2 est une upgrade d’AngularJS. En réalité, Angular2 a été totalement réécrit par Google, ce qui en fait un nouveau framework à part entière, avec une philosophie et des concepts propres à lui.</p>
-                <img src="assets/angular/1.gif" width="500"/>
-            </section>
-            <section>
                 <p>Le terme AngularJS désigne la version 1.x.x du framework, et les versions supérieures ou égale à 2 sont nommées simplement Angular.</p>
             </section>
             <section>
+                <p>Si vous connaissez AngularJS (Angular 1.x), vous pensez peut-être qu’Angular est une upgrade d’AngularJS. En réalité, Angular a été totalement réécrit par Google, ce qui en fait un nouveau framework à part entière, avec une philosophie et des concepts propres à lui.</p>
+                <img src="assets/angular/1.gif" width="500"/>
+            </section>
+            <section>
                 <h4>
-                    Au travers d’Angular, Google cherche à faire table rase du passé, en remettant à plat de nombreux concepts présents dans Angular 1.
+                    Au travers d’Angular, Google cherche à faire table rase du passé, en remettant à plat de nombreux concepts présents dans AngularJS.
                 </h4>
                 <!-- http://blog.xebia.fr/2015/12/14/angular-2-presentation/ -->
                 <!-- https://www.supinfo.com/articles/single/6184-presentation-univers-angular -->
@@ -122,7 +122,7 @@
                     Google nous propose un outil clé en main pour réaliser les tâches de développement les plus courantes. Ce projet est basé sur le projet Open Source ember CLI, qui a maintenant plus de trois ans. Grâce à notre Angular Cli, il est possible de :
                 <ul>
                     <li>Créer une application from scratch via un scaffolding</li>
-                    <li>Générer des squelettes des composants type Components…</li>
+                    <li>Générer des component|directive|pipe|service|class|guard|interface|enum|module</li>
                     <li>Builder un projet</li>
                     <li>Lancer des tests de End-to-End (E2E) ou unitaires</li>
                     <li>Et beaucoup d'autres choses…</li>
@@ -136,7 +136,7 @@
                 <ul>
                     <li>npm i -g @angular/cli</li>
                     <li>ng new my-dream-app</li>
-                    <li>ng new my-dream-app --style=scss|sass</li>
+                    <li>ng new my-dream-app --style=less|scss</li>
                     <li>cd my-dream-app</li>
                     <li>ng serve</li>
                 </ul>
@@ -353,89 +353,26 @@
                 </ul>
             </section>
         </section>
+        <section>
+            <section>
+                <h2>Services</h2>
+                <p>
+                   "Components shouldn't fetch or save data directly and they certainly shouldn't knowingly present fake data. They should focus on presenting data and delegate data access to a service."
+                </p>
+            </section>
+            <section>
+                <h3>@Injectable</h3>
+                <p>@Injectable() lets Angular know that a class can be used with the dependency injector.</p>
+            </section>
+            <section>
+                <h3>Providers</h3>
+            </section>
+            <section>
+                <h3>@Inject</h3>
+                <p>@Inject() is a manual mechanism for letting Angular know that a parameter must be injected.</p>
+            </section>
+        </section>
 
-        <section>
-            <h2>Continuous Integration</h2>
-            <img src="assets/octocats/jenktocat.jpg" width="400" style="background: rgba(255, 255, 255, 1)"/>
-        </section>
-        <section>
-            <section>
-                <h3>Travis-CI</h3>
-                <p>
-                    Hosted continuous integration service providing different runtimes for different languages.
-                </p>
-                <img src="assets/logos/travis-mascot-200px.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://travis-ci.org/">https://travis-ci.org/</a>
-                </p>
-            </section>
-            <section>
-                <h3>Last result for each repo & build history</h3>
-                <img src="assets/screenshots/travisci01.png"/>
-            </section>
-            <section>
-                <h3>Detailed build log for failure analysis</h3>
-                <img src="assets/screenshots/travisci02.png"/>
-            </section>
-            <section>
-                <h3>Build results per <code>pull</code> request</h3>
-                <img src="assets/screenshots/travisci05.png"/>
-            </section>
-            <section>
-                <h3>Build results per <code>commit</code> of a PR</h3>
-                <img src="assets/screenshots/travisci06.png"/>
-            </section>
-            <section>
-                <h3>Warning about ongoing PR build</h3>
-                <img src="assets/screenshots/travisci07.png"/>
-                <p>
-                    <small>Of course there is also a warning when the PR build failed.</small>
-                </p>
-            </section>
-            <section>
-                <h3>Watching the console of the running build</h3>
-                <img src="assets/screenshots/travisci08.png"/>
-            </section>
-            <section>
-                <h3>Merging PR with a warm <span style="color: #6cc644;">All is well</span>-feeling</h3>
-                <img src="assets/screenshots/travisci09.png"/>
-            </section>
-            <section>
-                <h3>Build configuration via <code>.travis.yml</code> file</h3>
-                <img src="assets/screenshots/travisci04.png"/>
-            </section>
-        </section>
-        <section>
-            <section>
-                <h3>Saucelabs</h3>
-                <p>
-                    Automated cross-browser and mobile testing in the cloud for CI.
-                </p>
-                <img src="assets/logos/saucelabs.jpg" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://saucelabs.com/">https://saucelabs.com/</a>
-                </p>
-            </section>
-            <section>
-                <h3>List of last test run results for juice-shop</h3>
-                <img src="assets/screenshots/saucelabs01.png"/>
-            </section>
-            <section>
-                <h3>Overview of the last failed test run</h3>
-                <img src="assets/screenshots/saucelabs02.png"/>
-            </section>
-            <section>
-                <h3>Live screencast of ongoing e2e test run</h3>
-                <img src="assets/screenshots/saucelabs07.png"/>
-            </section>
-            <section>
-                <h3>Triggering <a href="https://docs.saucelabs.com/ci-integrations/travis-ci/">Saucelabs from Travis CI</a></h3>
-                <img src="assets/screenshots/saucelabs03.png"/>
-                <p>
-                    <small>The secure tokens are your <code>SAUCE_USERNAME</code> and <code>SAUCE_ACCESS_KEY</code>.</small>
-                </p>
-            </section>
-        </section>
 
         <section>
             <h2>Quality Assurance</h2>
