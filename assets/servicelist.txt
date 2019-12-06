@@ -177,3 +177,27 @@ buddycloud
 geocommit
 jqueryplugins
 tenxer
+
+
+<ul>
+                    <li>
+                        <span style="color: #6cc644;">String interpolation</span> {{ data }}
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Property binding</span> [property]="data" or bind-property="data",
+                        par exemple:
+                        <xmp>
+                            <button [disabled]="isDisabled"> ...</button>
+                        </xmp>
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Event Binding </span> (event)="callback()" or
+                        on-click="callback()", par exemple:
+                        <xmp>
+                            <button (click)="onClick()"></button>
+                        </xmp>
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Two-way binding </span> (Banana in the box) [(data)]
+                    </li>
+                </ul>

@@ -22,6 +22,18 @@
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
+    <style>
+        .text-warning {
+            color: #e7ad52 !important;
+        }
+        .text-info {
+            color: #24c672 !important;
+        }
+        .text-left {
+            text-align: left;
+        }
+    </style>
+
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
         if( window.location.search.match( /print-pdf/gi ) ) {
@@ -45,344 +57,854 @@
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
         <section>
-            <img src="assets/logos/angular.png" class="heart" width="200" style="background: none; border:none; box-shadow:none;"/>
+            <img src="assets/angular/angular.png" class="heart" width="200"
+                 style="background: none; border:none; box-shadow:none;"/>
 
             <h1>Angular</h1>
             <p>
-                <small>Présenté par: <a href="http://houdass.com">Youness Houdass</a></small>
+                <small>Presented by: <a href="http://houdass.com">Youness Houdass</a></small>
+            </p>
+            <p>
+                <small>Email: Houd.youness@gmail.com</small>
             </p>
             <p>
                 <a href="http://angular.io/">http://angular.io/</a>
             </p>
         </section>
+        <!-- I- Introduction -->
         <section>
             <section>
-                <h2>1. Qu'est ce que angular?</h2>
-                <img src="assets/angular/5.gif" width="500"/>
+                <h1 class="text-warning">I- Introduction</h1>
+            </section>
+        </section>
+
+        <!-- I- 1. What is Angular? -->
+        <section>
+            <section>
+                <h3>I- 1. What is Angular?</h3>
+                <img src="assets/angular/jimcarrey.gif" width="500"/>
             </section>
             <section>
-                <p>Angular est une plateforme de développement qui permet de créer des applications clientes web, il est aussi utilisé pour la création d’application mobile, notamment avec Ionic.</p>
+                <p class="text-left">Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations, Angular is a complete rewrite from the same team that built AngularJS.</p>
             </section>
             <section>
-                <p>Angular permet de créer des applications SPA (single page application).</p>
+                <p>It is one of the most popular JavaScript frameworks, that developers use to build dynamic websites.</p>
             </section>
             <section>
-                <p>Le terme AngularJS désigne la version 1.x.x du framework, et les versions supérieures ou égale à 2 sont nommées simplement Angular.</p>
+                <p>It is an open-source software engineering framework used for building SPAs (single page application).</p>
+            </section>
+        </section>
+
+        <!-- I- 2. AngularJS vs. Angular2+ -->
+        <section>
+            <section>
+                <h3>I- 2. AngularJS vs. Angular2+</h3>
+                <img src="assets/angular/angularvsangularjs.gif" width="500"/>
             </section>
             <section>
-                <p>Si vous connaissez AngularJS (Angular 1.x), vous pensez peut-être qu’Angular est une upgrade d’AngularJS. En réalité, Angular a été totalement réécrit par Google, ce qui en fait un nouveau framework à part entière, avec une philosophie et des concepts propres à lui.</p>
+                <p>Originally, the rewrite of <strong>AngularJS</strong> was called <strong>Angular 2</strong> by the team, but this led to confusion among developers. To clarify, the team announced that separate terms should be used for each framework with <strong>AngularJS</strong> referring to the 1.X versions and <strong>Angular</strong> without the <strong>JS</strong> referring to versions 2 and up.</p>
                 <img src="assets/angular/1.gif" width="500"/>
             </section>
             <section>
-                <h4>
-                    Au travers d’Angular, Google cherche à faire table rase du passé, en remettant à plat de nombreux concepts présents dans AngularJS.
-                </h4>
-                <!-- http://blog.xebia.fr/2015/12/14/angular-2-presentation/ -->
-                <!-- https://www.supinfo.com/articles/single/6184-presentation-univers-angular -->
-                <p>
-                    Cette stratégie a été motivée par 4 principes fondateurs :
-                    <ul>
-                        <li>Augmenter les performances</li>
-                        <li>Améliorer la productivité</li>
-                        <li>S’adapter au mobile</li>
-                        <li>Embrasser les nouveaux standards du Web</li>
-                    </ul>
-                </p>
-            </section>
-            <section>
-                <h3>Un peu d'histoire</h3>
+                <h3>Beneficts</h3>
                 <ul>
-                    <li>Angular 2: 14 September 2016</li>
-                    <li>Angular 4: 23 Mars 2017 (Pas de version 3, car toutes les bibliothèques Angular de base étaient toutes à la version v2.3.0, sauf le paquet @angular/router qui était à la v3.3.0)</li>
-                    <li>Angular 5: 1 November 2017</li>
-                    <li>Angular 6: 4 Avril 2018</li>
-                </ul>
-                <img src="assets/angular/2.png" width="400"/>
-            </section>
-            <section>
-                <h3>Avantages</h3>
-                <ul>
-                    <li>Des performances améliorées</li>
-                    <li>Une modularité accrue / du code plus expressif</li>
-                    <li>Un respect des nouveaux standards du web</li>
+                    <li>Extensive documentation</li>
+                    <li>Testing</li>
+                    <li>Mobile and desktop compatibility</li>
+                    <li>Increase performance</li>
+                    <li>Increased modularity / more expressive code</li>
+                    <li>New web standards</li>
+                    <li>Full-featured & powerful</li>
+                    <li>Elegent programming style & patterns</li>
+                    <li>Rich package ecosystem</li>
                 </ul>
             </section>
         </section>
 
+        <!-- I- 3. Setup projet -->
         <section>
             <section>
-                <h2>2. Angular CLI</h2>
+                <h3>I- 3. Setup projet</h3>
+            </section>
+            <section>
+                <p>
+                    Check: <a hred="https://wiki.sicpa.com/display/WDC/Getting+Started+for+Angular" style="cursor: pointer;">Angular: Getting started</a>
+                </p>
+            </section>
+            <section>
+                <p>
+                <ul>
+                    <li>npm i -g @angular/cli</li>
+                    <li>ng new my-sicpa-app</li>
+                    <li>ng new my-sicpa-app</li>
+                    <li>cd my-dream-app</li>
+                    <li>ng serve</li>
+                </ul>
+                </p>
+            </section>
+        </section>
+
+        <!-- I- 4. Angular CLI -->
+        <section>
+            <section>
+                <h3>I- 4. Angular CLI</h3>
             </section>
             <section>
                 <img src="assets/angular/6.svg" width="400" style="background: none; border:none; box-shadow:none;"/>
                 <p>
-                    "The CLI is a geart tool for big and very big Angular projects! It allows to focus on Angular code instead of workflow tasks."
-                </p>
-                <p>
-                    Google nous propose un outil clé en main pour réaliser les tâches de développement les plus courantes. Ce projet est basé sur le projet Open Source ember CLI, qui a maintenant plus de trois ans. Grâce à notre Angular Cli, il est possible de :
-                <ul>
-                    <li>Créer une application from scratch via un scaffolding</li>
-                    <li>Générer des component|directive|pipe|service|class|guard|interface|enum|module</li>
-                    <li>Builder un projet</li>
-                    <li>Lancer des tests de End-to-End (E2E) ou unitaires</li>
-                    <li>Et beaucoup d'autres choses…</li>
-                </ul>
+                    The <strong>CLI</strong> is a geart tool for big and very big Angular projects! It allows to focus on Angular code
+                    instead of workflow tasks.
                 </p>
             </section>
-        </section>
-        <section>
-            <h2>3. Setup du projet via Angular CLI</h2>
-            <p>
-                <ul>
-                    <li>npm i -g @angular/cli</li>
-                    <li>ng new my-dream-app</li>
-                    <li>ng new my-dream-app --style=less|scss</li>
-                    <li>cd my-dream-app</li>
-                    <li>ng serve</li>
-                </ul>
-            </p>
-        </section>
-
-        <section>
-            <h2>4. Ajouter bootstrap au projet</h2>
-            <p>
-            <ul>
-                <li>npm i -S bootstrap@3.3.7</li>
-                <li>Ouvrir le fichier .angular-cli.json</li>
-            <li>Au niveau du noeud <strong>styles</strong> ajouter : <span style="color: #6cc644;">../node_modules/bootstrap/dist/css/bootstrap.min.css</span></li>
-            </ul>
-            </p>
-        </section>
-
-        <section>
-            <section>
-                <h2>5. Les selectors (composants)</h2>
-            </section>
-
             <section>
                 <p>
-                <ul>
-                    <li>
-                        selector: 'app-users'
-                        <xmp style="color: #6cc644;"><app-users></app-users></xmp>
-                    </li>
-                    <li>
-                        selector: '.app-users'
-                        <xmp style="color: #6cc644;"><div class="app-users"></div></xmp>
-                    </li>
-                    <li>
-                        selector: '[app-users]'
-                        <xmp style="color: #6cc644;"><div app-users></div></xmp>
-                    </li>
-                </ul>
+                    The <strong>Angular CLI</strong> makes it easy to create an application that already works, right out of the box. It already follows the best practices!
+                </p>
+            </section>
+            <section>
+                <p>
+                    You can also generate components, routes, services and pipes ... etc, with a simple command. The CLI will also create simple test shells for all of these.
                 </p>
             </section>
         </section>
 
+        <!-- I- 5. sicpa-ng-schematics -->
         <section>
             <section>
-                <h2>6. Databinding</h2>
+                <h3>I- 5. sicpa-ng-schematics</h3>
+            </section>
+            <section>
+                <p>
+                    Check: <a href="http://psdgit.sicpa-net.ads/projects/WDT/repos/sicpa-ng-schematics/browse" target="_blank">Sicpa NG Schematics</a>
+                </p>
+            </section>
+        </section>
+
+        <!-- II- Fundamentals -->
+        <section>
+            <h1 class="text-warning">II- Fundamentals</h1>
+        </section>
+
+        <!-- II- 1. How an Angular App gets Loaded and Started? -->
+        <section>
+            <h3>II- 1. How an Angular App gets Loaded and Started?</h3>
+        </section>
+
+        <!-- II- 2. Components are Important! -->
+        <section>
+            <h3>II- 2. Components are Important!</h3>
+            <img src="assets/angular/4.png" width="500" style="background: none; border:none; box-shadow:none;"/>
+        </section>
+
+        <!-- II- 3. Create a component -->
+        <section>
+            <h3>II- 3. Create a component</h3>
+            <pre><code>ng generate component user
+ng g c user</code></pre>
+        </section>
+
+        <!-- II- 4. Databinding -->
+        <section>
+            <section>
+                <h3>II- 4. Databinding</h3>
                 <img src="assets/angular/3.gif" width="400" style="background: none; border:none; box-shadow:none;"/>
             </section>
             <section>
-                <p>
+                <h3>II- 4. a. String interpolation</h3>
                 <ul>
-                    <li>
-                        <span style="color: #6cc644;">String interpolation</span> {{ data }}
-                    </li>
-                    <li>
-                        <span style="color: #6cc644;">Property binding</span> [property]="data" or bind-property="data", par exemple: <xmp><button [disabled]="isDisabled"> ...</button></xmp>
-                    </li>
-                    <li>
-                        <span style="color: #6cc644;">Event Binding </span> (event)="callback()" or on-click="callback()", par exemple: <xmp><button (click)="onClick()"></button></xmp>
-                    </li>
-                    <li>
-                        <span style="color: #6cc644;">Two-way binding </span> (Banana in the box) [(data)]
+                    <li>The text between the braces is often the name of a component property. Angular replaces that name with the string value of the corresponding component property.</li>
+                    <li>String interpolation is used to print/output dynamic data on HTML templates</li>
+                </ul>
+                <pre><code>{{ data }}</code></pre>
+            </section>
+            <section>
+                <h3>II- 4. b. Property binding</h3>
+                <ul>
+                    <li>Property binding is used to pass data from the component class (component.ts) and setting the value of the given element in the user-end (component.html)</li>
+                    <li>Property binding is an example of one-way databinding where the data is transferred from the component to the class</li>
+                    <li>The main advantage of property binding is that it facilitates you to control elements property</li>
+                    <li>It's weird at first, but it's actually valid HTML. An HTML attribute name can start with anything, except for a few characters such as a quotation mark, an apostrophe, a slash, an equals, a space ... Interpolation {{ name }} is just syntactic sugar for the following line:
+                        <pre><code><span [text&#67;ontent]="name"></span></code></pre>
                     </li>
                 </ul>
+                <pre><code><button [disabled]="isDisabled">...</button>
+<button bind-disabled="isDisabled">...</button></code></pre>
+            </section>
+            <section>
+                <h3>Attribute/class/style binding</h3>
+                <p class="text-left">Property binding can be used with diffrent forms:</p>
+                <p class="text-left">Attribute binding <pre><code><table><td [attr.colspan]="clspn">...</td></table></code></pre></p>
+                <p class="text-left">Class binding <pre><code><span [class.active]="isActive">Some text</span></code></pre>
+                <p class="text">Style binding <pre><code><span [style.background-color]="'blue'">Blue text</span></code></pre></p>
+                <p class="text">Or, <pre><code><span [style.background&#67;olor]="'blue'">Blue text</span></code></pre></p>
+            </section>
+            <section>
+                <h3>II- 4. c. Event binding</h3>
+                <p>Angular facilitates us to bind the events along with the methods, this process is known as event binding. Event binding is used with parenthesis ()</p>
+                <pre><code><button (click)="handleClick()"></button>
+<button on-click="handleClick()"></button></code></pre>
+                <p>You can even make event binding to specific keys and events</p>
+                <pre><code><button on-click="callback()">Click</button></code></pre>
+                <p>More examples:</p>
+                <img src="assets/angular/eventbindings.png" width="400" style="background: none; border:none; box-shadow:none;"/>
+            </section>
+            <section>
+                <h3>II- 4. d. Two way binding</h3>
+                <p>(Banana in the box)</p>
+                <p>In two-way databinding, automatic synchronization of data happens between the Model and the View. Here, change is reflected in both components. Whenever you make changes in the Model, it will be reflected in the View and when you make changes in View, it will be reflected in Model</p>
+                <pre><code><input name="name" [(ng&#77;odel)]="user.name">
+<input name="name" [ng&#77;odel]="user.name" (ng&#77;odel&#67;hange)="user.name = $event"></code></pre>
+            </section>
+        </section>
+
+        <!-- II- 5. Understanding Directives -->
+        <section>
+            <h3>II- 5. Understanding Directives</h3>
+            <p class="text-left">Directives are components without a view, they are components without a template, Or to put it another way, components are directives with a view.</p>
+            <p class="text-left">There are two types of directives in Angular:</p>
+            <ul>
+                <li><strong>Structural Directives</strong> are directives which change the structure of the DOM by adding or removing elements. There are three built in structural directives, <strong>NgIf, NgFor and NgSwitch.</strong></p></li>
+                <li><strong>Attribute Directives</strong> are used to change the look and behavior of the DOM elements. For example: <strong>ngClass, ngStyle etc.</strong></p></li>
+            </ul>
+        </section>
+
+        <!-- II- 6. *ngIf & *ngFor & ngSwitch -->
+        <section>
+            <section><h3>II- 6. *ngIf & *ngFor & ngSwitch</h3></section>
+            <section>
+                <h3>II- 6. a. *ngIf </h3>
+                <p>
+                    <img src="assets/angular/ifelse.png" width="500" style="background: none; border:none; box-shadow:none;"/>
+                <p>For more consistance</p>
+                <img src="assets/angular/ifelse2.png" width="500" style="background: none; border:none; box-shadow:none;"/>
+                </p>
+
+            </section>
+            <section>
+                <h3>II- 6. b. *ngFor </h3>
+                <pre><code><div *ngfor="let item of items; let i = index">{{ i }} - {{ item }}</div></code></pre>
+                <p>Or, </p>
+                <pre><code><p *ngfor="let item of items; index as i">{{ i }} - {{ item }}</p></code></pre>
+            </section>
+            <section>
+                <h3>II- 6. c. ngSwitch </h3>
+                <img src="assets/angular/ngswitch.png" width="500" style="background: none; border:none; box-shadow:none;"/>
+            </section>
+        </section>
+
+        <!-- II- 7. ngClass & ngStyle -->
+        <section>
+            <section><h3>II- 7. ngClass & ngStyle</h3></section>
+            <section>
+                <h4>II- 7. a. ngClass </h4>
+                <ul>
+                    <li>using stringExp
+                        <pre><code><span [ng&#67;lass]="'dodgerblue large'">Some text</span></code></pre>
+                    </li>
+                    <li>using arrayExp
+                        <pre><code><span [ng&#67;lass]="['dodgerblue', 'italic']">Some text</span></code></pre>
+                    </li>
+                    <li>using objExp
+                        <pre><code><span [ng&#67;lass]="{dodgerblue: true, large: true, italic: false}">Some Text</span></code></pre>
+                    </li>
+                    <li>using conditional stringExp
+                        <pre><code><span [ng&#67;lass]="{'dodgerblue large italic': true}">Some text</span></code></pre>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h4>II- 7. b. ngStyle </h4>
+                <pre><code><span [ng&#83;tyle]="{'background-color':'green'}"></span></code></pre>
+                <pre><code><p [ng&#83;tyle]="{'background-color': person.country === 'UK' ? 'green' : 'red' }"></p></code></pre>
+            </section>
+        </section>
+
+        <!-- II- 8. Debugging -->
+        <section>
+            <section>
+                <h3>II- 8. Debugging</h3>
+                <p><a href="https://augury.rangle.io/" target="_blank">Augury</a></p>
+            </section>
+        </section>
+
+        <!-- III- Components -->
+        <section>
+            <section>
+                <h1 class="text-warning">III- Components</h1>
+            </section>
+        </section>
+
+        <!-- III- 1. template/templateUrl -->
+        <section>
+            <section>
+                <h3>III- 1. template/templateUrl</h3>
+            </section>
+        </section>
+
+        <!-- III- 2. selectors -->
+        <section>
+            <section>
+                <h3>III- 2. selectors</h3>
+            </section>
+            <section>
+                <p>
+                    selector: 'app-users'
+                <pre><code><app-users></app-users></code></pre>
+                </p>
+                <p>
+                    selector: '.app-users'
+                <pre><code><div class="app-users"></div></code></pre>
+                </p>
+                <p>
+                    selector: '[app-users]'
+                <pre><code>&#60;&#100;&#105;&#118;&#32;&#97;&#112;&#112;&#45;&#117;&#115;&#101;&#114;&#115;&#62;&#60;&#47;&#100;&#105;&#118;&#62;</code></pre>
                 </p>
             </section>
         </section>
 
-        <section>
-            <h2>*ngIf / else condition</h2>
-            <ul>
-                <li><xmp style="color: #6cc644;"><p *ngIf="isVisible; else noCondition">This is true</p></xmp></li>
-                <li><xmp style="color: #6cc644;"><ng-template #noCondition><p>This is false<p></ng-template></xmp></li>
-            </ul>
-        </section>
-        <section>
-            <h2>*ngFor / index</h2>
-            <ul>
-                <li><xmp style="color: #6cc644;"><p *ngFor="let item of items; let i = index">{{i}} - {{item.name}}</p></xmp></li>
-                <li>Or, <xmp style="color: #6cc644;"><p *ngFor="let item of items; index as i">{{i}} - {{item.name}}</p></xmp></li>
-            </ul>
-        </section>
-        <section>
-            <h2>Encapsulation</h2>
-            <ul>
-                <li>
-                    <span style="color: #6cc644;">encapsulation: ViewEncapsulation.Emulated</span> Pas de shadow DOM, mais une émulation du Shadow DOM. C'est le comportement par défaut.
-                </li>
-                <li>
-                    <span style="color: #6cc644;">encapsulation: ViewEncapsulation.Native </span> Utilisation du véritable shadow DOM. Superbe sur Chrome, mais cela s'arrête là pour le moment. Ni Safari, ni Firefox ne supporte ce mécanisme.
-                </li>
-                <li>
-                    <span style="color: #6cc644;">encapsulation: ViewEncapsulation.None </span> Ni shadow DOM, ni aucun mécanisme d'encapsulation de style CSS.
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Input/Output</h2>
-            <ul>
-                <li>
-                    <span style="color: #6cc644;">@Input</span>
-                </li>
-                <li>
-                    <span style="color: #6cc644;">@Output</span>
-                </li>
-                <li>
-                    Quand @Input se charge de recevoir une valeur, @Output se charge, lui, d'envoyer une donnée.
-                </li>
-            </ul>
-            <img src="assets/angular/7.png" width="400" style="background: none; border:none; box-shadow:none;"/>
-        </section>
-
-        <section>
-            <h2>Template reference variables</h2>
-            <p>Les variables référence de template (ou template reference variables) permettent d’accéder à un élément DOM ou un composant Angular via une variable déclarée directement sur la balise de cet élément ou de ce composant avec la syntaxe #var ou ref-var.</p>
-        </section>
+        <!-- III- 3. styles/styleUrls -->
         <section>
             <section>
-                <h2>Hooks (Le cycle de vie d’un Component)</h2>
-                <p>Pour ceux qui ne connaissent pas le terme de cycle de vie, il s'agit simplement de la définition de toutes les étapes de la naissance du Component à sa mort.</p>
+                <h3>III- 3. styles/styleUrls</h3>
+            </section>
+        </section>
+
+        <!-- III- 4. @Input -->
+        <section>
+            <section>
+                <h3>III- 4. @Input</h3>
+            </section>
+        </section>
+
+        <!-- III- 5. @Output -->
+        <section>
+            <section>
+                <h3>III- 5. @Output</h3>
+                <p class="text-left">@Input is used to pass data from parent to child and the opposite, @Output, can be used when you want to pass data from the child to the parent.</p>
+                <img src="assets/angular/7.png" width="400" style="background: none; border:none; box-shadow:none;"/>
+            </section>
+        </section>
+
+        <!-- III- 6. Encapsulation -->
+        <section>
+            <h3>III- 6. Encapsulation</h3>
+            <ul>
+                <li>
+                    <span class="text-info"><strong>encapsulation: ViewEncapsulation.Emulated</strong></span> Emulate Native scoping of styles by adding an attribute containing surrogate id to the Host Element and pre-processing the style rules provided via styles or styleUrls, and adding the new Host Element attribute to all selectors. This is the default option.
+                </li>
+                <li>
+                    <span class="text-info"><strong>encapsulation: ViewEncapsulation.Native</strong></span> Use Shadow DOM to encapsulate styles.
+                </li>
+                <li>
+                    <span class="text-info"><strong>encapsulation: ViewEncapsulation.None</strong></span> Don't provide any template or style encapsulation.
+                </li>
+            </ul>
+        </section>
+
+        <!-- III- 7. Template reference variables -->
+        <section>
+            <h3>III- 7. Template reference variables</h3>
+            <p>A template reference variable is often a reference to a DOM element within a template. It can also be a reference to an Angular component or directive or a web component (Read more at Angular.io). That means you can easily access the variable anywhere in the template.
+                You declare a reference variable by using the hash symbol (#) or the (ref-) synthax, e.g : #var or ref-var.</p>
+        </section>
+
+        <!-- III- 8. @ViewChild -->
+        <section>
+            <h3>III- 8. @ViewChild </h3>
+            <p>Want to get access to a child component, directive or a DOM element from a parent component class? It’s easy to do with the ViewChild decorator. ViewChild returns the first element that matches a given component, directive or template reference selector. In cases where you’d want to access multiple children, you’d use ViewChildren instead.</p>
+        </section>
+
+        <!-- III- 9. @ContentChild -->
+        <section>
+            <h3>III- 9. @ContentChild </h3>
+            <p>Includes only elements that exists within the ng-content tag.</p>
+        </section>
+
+        <!-- III- 10. Lifecycle Hooks -->
+        <section>
+            <section>
+                <h3>III- 10. Lifecycle Hooks</h3>
+                <ul>
+                    <li>A component has a lifecycle managed by Angular.</li>
+                    <li>Angular creates and renders components along with their children, checks when their data-bound properties change, and destroys them before removing them from the DOM.</li>
+                    <li>Angular offers lifecycle hooks that provide visibility into these key life moments and the ability to act when they occur.</li>
+                </ul>
                 <img src="assets/angular/8.png" width="300" style="background: none; border:none; box-shadow:none;"/>
             </section>
             <section>
-                <h3>ngOnChanges</h3>
-                <p>
-                    Se lance lorsqu'Angular modifie une des propriétés du Component / directive suite à un Property Binding <span style="color: #6cc644;">@Input</span>. La méthode reçoit un object SimpleChanges contenant les valeurs courantes et précédentes.
-
-                    Il est lancé avant <span style="color: #6cc644;">ngOnInit</span> et à chaque fois qu'une ou plusieurs propriétés précédées de <span style="color: #6cc644;">@Input</span> change.
+                <h4>III- 10. a. ngOnChanges</h4>
+                <p class="text-left">
+                    Respond when Angular (re)sets data-bound input properties. The method receives a SimpleChanges object of current and previous property values.
+                    <br>
+                    Called before <span class="text-info">ngOnInit()</span> and whenever one or more data-bound input properties change.
                 </p>
             </section>
             <section>
-                <h3>ngOnInit</h3>
-                <p>Initialise le component / directive après qu'Angular ait valorisé les Property Binding <span style="color: #6cc644;">@Input</span>. Il n'est lancé qu'une seule fois après le premier .
+                <h4>III- 10. b.ngOnInit</h4>
+                <p class="text-left">Initialize the directive/component after Angular first displays the data-bound properties and sets the directive/component's input properties.
+                    <br>
+                    Called once, after the first <span class="text-info">ngOnChanges()</span>.
                 </p>
             </section>
             <section>
-                <h3>ngDoCheck</h3>
-                <p>Détecte et agit sur les changements qu'Angular ne peut ou ne pourra pas détecter lui même. Il permet, en outre, de vérifier les changements dans les directives additionnelement aux algorithmes classiques. Il est appelé immédiatement après <span style="color: #6cc644;">ngOnChanges</span> et <span style="color: #6cc644;">ngOnInit</span>.</p>
+                <h4>III- 10. c. ngDoCheck</h4>
+                <p class="text-left">Detect and act upon changes that Angular can't or won't detect on its own. <br>Called during every change detection run, immediately after <span class="text-info">ngOnChanges</span>  and <span class="text-info">ngOnInit</span>.</p>
             </section>
             <section>
-                <h3>ngAfterContentInit</h3>
-                <p>Il se lance également après l'initialisation d'un Content (ng-content). A partir de ce moment, les propriétés initialisées par <span style="color: #6cc644;">@ContentChild</span> et <span style="color: #6cc644;">@ContentChildren</span> sont valorisées.
-
-                    Il n' est appelé qu'une fois après le premier <span style="color: #6cc644;">ngDoCheck</span>. </p>
+                <h4>III- 10. d. ngAfterContentInit</h4>
+                <p class="text-left">Respond after Angular projects external content into the component's view / the view that a directive is in.
+                    <br>Called once after the first <span class="text-info">ngDoCheck()</span>.</p>
             </section>
             <section>
-                <h3>ngAfterContentChecked</h3>
-                <p>Se lance après le check du Content.</p>
+                <h4>III- 10. e. ngAfterContentChecked</h4>
+                <p class="text-left">Respond after Angular checks the content projected into the directive/component.
+                    <br>
+                    Called after the <span class="text-info">ngAfterContentInit()</span> and every subsequent <span class="text-info">ngDoCheck()</span>.</p>
             </section>
             <section>
-                <h3>ngAfterViewInit</h3>
-                <p>Se lance après qu'Angular initialise la vue (template) du Component et les vues enfants. A partir de ce moment, les propriétés initialisées <span style="color: #6cc644;">@ViewChild</span> et <span style="color: #6cc644;">@ViewChildren</span> sont valorisées
-
-                    Il n'est appelé qu'une seule fois après <span style="color: #6cc644;">ngAfterContentChecked</span>.</p>
+                <h4>III- 10. f. ngAfterViewInit</h4>
+                <p class="text-left">Respond after Angular initializes the component's views and child views / the view that a directive is in.<br>
+                    Called once after the first <span class="text-info">ngAfterContentChecked</span>.</p>
             </section>
             <section>
-                <h3>ngAfterViewChecked</h3>
-                <p>Se lance après le check de la vue (template)</p>
+                <h4>III- 10. g. ngAfterViewChecked</h4>
+                <p class="text-left">Respond after Angular checks the component's views and child views / the view that a directive is in.
+                    <br>
+                    Called after the <span class="text-info">ngAfterViewInit()</span> and every subsequent <span class="text-info">ngAfterContentChecked()</span>.</p>
             </section>
             <section>
-                <h3>ngOnDestroy</h3>
-                <p>Se lance juste avant qu'Angular ne détruise le Component / directive. C'est l'endroit idéal pour desinscrire les Observables et détacher les évènements afin d'éviter les fuites mémoires.
-
-                    Il est appelé qu'une seule fois avant la destruction du Component / directive.</p>
+                <h4>III- 10. h.ngOnDestroy</h4>
+                <p class="text-left">Cleanup just before Angular destroys the directive/component. Unsubscribe Observables and detach event handlers to avoid memory leaks.
+                    <br>Called just before Angular destroys the directive/component.</p>
             </section>
         </section>
+
+        <!-- IV- Directives -->
         <section>
             <section>
-                <h3>Directives</h3>
-                <p>
-                    Les Components sont des directives à la seule différence qu'ils possèdent une fonctionnalité de templating. En TypeScript, une directive est une classe à laquelle on applique le décorateur <span style="color: #6cc644;">@Directive</span>.
-                </p>
+                <h1 class="text-warning">IV- Directives</h1>
             </section>
             <section>
-                <p>Il existe deux sortes de directives :</p>
-                <p>Les directives structurelles : Elles ont pour but de modifier le DOM en ajoutant, enlevant ou replaçant un élément du DOM.
-                        Les attribute directives : Elles ont pour but de modifier l'apparence ou le comportement d'un élément.</p>
-
+                <h3>IV- 1. ElementRef</h3>
+                <pre><code>&#60;&#112;&#32;&#97;&#112;&#112;&#66;&#97;&#115;&#105;&#99;&#72;&#105;&#103;&#104;&#108;&#105;&#103;&#104;&#116;&#62;&#65;&#112;&#112;&#32;&#66;&#97;&#115;&#105;&#99;&#32;&#72;&#105;&#103;&#104;&#108;&#105;&#103;&#104;&#116;&#32;&#69;&#120;&#97;&#109;&#112;&#108;&#101;&#60;&#47;&#112;&#62;</code></pre>
+                <pre><code>constructor(private elementRef: ElementRef) {}</code></pre>
+                <pre><code>ngOnInit() {
+    this.elementRef.nativeElement.style.backgroundColor = 'green';
+}</code></pre>
             </section>
             <section>
-                <h3>ElementRef</h3>
-                <p>
-                    <ul>
-                        <li><p appBasicHighlight>App Basic Highlight Example</p></li>
-                        <li><pre>constructor(private elementRef: ElementRef) {}</pre></li>
-                        <li><pre>ngOnInit() { this.elementRef.nativeElement.style.backgroundColor = 'green'; }</pre></li>
-                    </ul>
-                </p>
+                <h3>IV- 2. Renderer</h3>
+                <pre><code>constructor(private elRef: ElementRef, private renderer: Renderer2) {}</code></pre>
+                <pre><code>ngOnInit() {
+    this.renderer.setStyle(this.elRef.nativeElement, 'backgroundColor', 'blue');
+}</code></pre>
             </section>
             <section>
-                <h3>Renderer</h3>
-                <ul>
-                    <li><pre>constructor(private elRef: ElementRef, private renderer: Renderer2) {}</pre></li>
-                    <li><pre>ngOnInit() { this.renderer.setStyle(this.elRef.nativeElement, 'backgroundColor', 'blue'); }</pre></li>
-                </ul>
+                <h3>IV- 3. @HostBinding</h3>
+                <pre><code>@HostBinding('style.backgroundColor') backgroundColor;</code></pre>
+                <pre><code>ngOnInit() { this.backgroundColor = 'blue'; }</code></pre>
             </section>
             <section>
-                <h3>@HostBinding</h3>
-                <ul>
-                    <li><pre>@HostBinding('style.backgroundColor') backgroundColor;</pre></li>
-                    <li><pre>ngOnInit() { this.backgroundColor = 'blue'; }</pre></li>
-                </ul>
-                </ul>
+                <h3>IV- 4. @HostListener</h3>
+                <pre><code>@HostListener('mouseenter') mouseenter(eventData: Event) {
+    this.backgroundColor = this.highlightColor;
+}</code></pre>
             </section>
             <section>
-                <h3>@HostListener</h3>
-                <pre>@HostListener('mouseenter') mouseenter(eventData: Event) { this.backgroundColor = this.highlightColor; }</pre>
-            </section>
-            <section>
-                <h3>@Input</h3>
-                <ul>
-                    <li>@Input() highlightColor = 'transparent';</li>
-                    <li><xmp style="color: #6cc644;"><p appBetterHighlight [highlightColor]="'blue'">Highlight Directive</p></xmp></li>
-                    <li>ou bien, <xmp style="color: #6cc644;"><p appBetterHighlight highlightColor="blue">Highlight Directive</p></xmp></li>
-                </ul>
+                <h3>IV- 5. @Input</h3>
+                <pre><code>@Input() highlightColor = 'transparent';</code></pre>
+                <pre><code>&#60;&#112;&#32;&#97;&#112;&#112;&#66;&#101;&#116;&#116;&#101;&#114;&#72;&#105;&#103;&#104;&#108;&#105;&#103;&#104;&#116;&#32;&#91;&#104;&#105;&#103;&#104;&#108;&#105;&#103;&#104;&#116;&#67;&#111;&#108;&#111;&#114;&#93;&#61;&#34;&#39;&#98;&#108;&#117;&#101;&#39;&#34;&#62;&#72;&#105;&#103;&#104;&#108;&#105;&#103;&#104;&#116;&#32;&#68;&#105;&#114;&#101;&#99;&#116;&#105;&#118;&#101;&#60;&#47;&#112;&#62;</code></pre>
+                <p>Or,</p>
+                <pre><code>&#60;&#112;&#32;&#97;&#112;&#112;&#66;&#101;&#116;&#116;&#101;&#114;&#72;&#105;&#103;&#104;&#108;&#105;&#103;&#104;&#116;&#32;&#104;&#105;&#103;&#104;&#108;&#105;&#103;&#104;&#116;&#67;&#111;&#108;&#111;&#114;&#61;&#34;&#98;&#108;&#117;&#101;&#34;&#62;&#72;&#105;&#103;&#104;&#108;&#105;&#103;&#104;&#116;&#32;&#68;&#105;&#114;&#101;&#99;&#116;&#105;&#118;&#101;&#60;&#47;&#112;&#62;</code></pre>
             </section>
         </section>
+
+        <!-- V- Services & Dependency Injection -->
         <section>
             <section>
-                <h2>Services</h2>
+                <h1 class="text-warning">V- Services & Dependency Injection</h1>
+            </section>
+            <section>
+                <h3>V- 1. Introduction</h3>
                 <p>
-                   "Components shouldn't fetch or save data directly and they certainly shouldn't knowingly present fake data. They should focus on presenting data and delegate data access to a service."
+                    Components shouldn't fetch or save data directly and they certainly shouldn't knowingly present
+                    fake data. They should focus on presenting data and delegate data access to a service.
                 </p>
             </section>
             <section>
-                <h3>@Injectable</h3>
+                <h3>V- 2. @Injectable</h3>
                 <p>@Injectable() lets Angular know that a class can be used with the dependency injector.</p>
             </section>
             <section>
-                <h3>Providers</h3>
+                <h3>V- 3. Providers</h3>
             </section>
             <section>
-                <h3>@Inject</h3>
+                <h3>V- 4. @Inject</h3>
                 <p>@Inject() is a manual mechanism for letting Angular know that a parameter must be injected.</p>
+            </section>
+            <section>
+                <h3>V- 5. @ProvidedIn</h3>
+            </section>
+            <section>
+                <h3>V- 6. UseClass, UseFactory, UseValue & UseExisting</h3>
             </section>
         </section>
 
-
+        <!-- VI- Routing -->
         <section>
             <section>
-                <h2>ngStore</h2>
-                <p>
-                    RxJS powered state management for Angular applications, inspired by Redux.
-                </p>
+                <h1 class="text-warning">VI- Routing</h1>
+            </section>
+            <!-- VI- 1- Introduction -->
+            <section>
+                <h3>VI- 1- Introduction</h3>
+                <div>The Angular router enables you to show different components and data to the user based on where the user is in the application. The router enables navigation from one view to the next as users perform application tasks:
+                    <ul>
+                        <li>Enter a URL in the address bar, and the browser navigates to a corresponding page.</li>
+                        <li>Click links on the page, and the browser navigates to a new page.</li>
+                        <li>Click the browser's back and forward buttons, and the browser navigates backward and forward through the history of pages you've seen.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- VI- 2- Setup des routes -->
+            <section>
+                <h3>VI- 2- Setup des routes</h3>
+                <a href="https://guide-angular.wishtack.io/angular/routing/mise-en-place-du-routing" target="_blank">For more informations</a>
+            </section>
+
+            <!-- VI- 3- <router-outlet> -->
+            <section>
+                <h3>VI- 3- &lt;router-outlet&gt;</h3>
+                <p>Acts as a placeholder that Angular dynamically fills based on the current router state.</p>
+            </section>
+
+            <!-- VI- 4- RouterLink, RouterLinkActive & RouterLinkActiveOptions -->
+            <section>
+                <h3>VI- 4- RouterLink, RouterLinkActive & RouterLinkActiveOptions</h3>
+            </section>
+
+
+            <!-- VI- 5- Comprendre les chemins de navigation -->
+            <section>
+                <h3>VI- 5- Understanding Navigation Paths</h3>
+            </section>
+
+            <!-- VI- 6- Navigating Programmatically (Typescript) -->
+            <section>
+                <h3>VI- 6- Navigating Programmatically (Typescript)</h3>
+            </section>
+
+            <!-- VI- 7- relativeTo -->
+            <section>
+                <h3>VI- 7- relativeTo</h3>
+            </section>
+
+            <!-- VI- 8- Pass & fetch parameters, des queryParams & fragments-->
+            <section>
+                <h3>VI- 8- Pass & fetch parameters, des queryParams & fragments</h3>
+            </section>
+
+            <!-- VI- 9- Children (Nested Routes) -->
+            <section>
+                <h3>VI- 9- Children (Nested Routes)</h3>
+            </section>
+
+            <!-- VI- 10- QueryParamsHandling -->
+            <section>
+                <h3>VI- 10- QueryParamsHandling</h3>
+            </section>
+
+            <!-- VI- 11- Redirection / Wildcard (**) -->
+            <section>
+                <h3>VI- 11- Redirection / Wildcard (**)</h3>
+            </section>
+
+            <!-- VI- 12- canActivate, canActivateChild & canDeactivate -->
+            <section>
+                <h3>VI- 12- canActivate, canActivateChild & canDeactivate</h3>
+            </section>
+
+            <!-- VI- 13- Static data (data) & Dynamic data (resolve) -->
+            <section>
+                <h3>VI- 13- Static data (data) & Dynamic data</h3>
+            </section>
+        </section>
+
+        <!-- VII- RxJS -->
+        <section>
+            <section>
+                <h1 class="text-warning">VII- RxJS</h1>
+            </section>
+            <!-- VII- 1- Introduction -->
+            <section>
+                <h3>VII- 1- Introduction</h3>
+                <p><strong>RxJS</strong> is a library for reactive programming using Observables, to make it easier to compose asynchronous or callback-based code.</p>
+            </section>
+
+            <!-- VII- 2- Observable/Observer -->
+            <section>
+                <h3>VII- 2- Observable/Observer</h3>
+                <p>An Observable sets up the observer and connects it to the "thing" we want to get values from. This "thing" is called a producer, and is a source of values, perhaps from a click or input event in the DOM. It could even be something more complex such as communication over HTTP.</p>
+                <p>An Observable is an object that implements a .subscribe method that takes as parameter an Observer, which has the following form:</p>
+                <pre><code>
+const observer = {
+  next: val => console.log(val), // a function to be performed at each new event
+  error: err => console.error(err), // a function to execute in case of error
+  complete: () => console.info('Complete!') // a function to execute when the observable has finished
+};
+                </code></pre>
+            </section>
+
+            <!-- VII- 3- Observable.create -->
+            <section>
+                <h3>VII- 3- Observable.create</h3>
+            </section>
+
+            <!-- VII- 4- Unsubscribe -->
+            <section>
+                <h3>VII- 4- Unsubscribe</h3>
+            </section>
+
+            <!-- VII- 5- Operators -->
+            <section>
+                <h3>VII- 5- Operators</h3>
+            </section>
+
+            <!-- VII- 6- Promise vs. Observable -->
+            <section>
+                <h3>VII- 6- Promise vs. Observable</h3>
+            </section>
+
+            <!-- VII- 7- Subject/BehaviorSubject -->
+            <section>
+                <h3>VII- 7- Subject/BehaviorSubject</h3>
+            </section>
+        </section>
+
+        <!-- VIII- Pipes -->
+        <section>
+            <section>
+                <h1 class="text-warning">VIII- Pipes</h1>
+            </section>
+
+            <!-- VIII- 1- Introduction -->
+            <section>
+                <h3>VIII- 1- Introduction</h3>
+                <p>Pipes are a simple way to transform values in an Angular template</p>
+            </section>
+
+            <!-- VIII- 2- Parametrizing Pipes -->
+            <section>
+                <h3>VIII- 2- Parametrizing Pipes</h3>
+            </section>
+
+            <!-- VIII- 3- Creating a Custom Pipe -->
+            <section>
+                <h3>VIII- 3- Creating a Custom Pipe</h3>
+            </section>
+
+            <!-- VIII- 4- Pure/Impure -->
+            <section>
+                <h3>VIII- 4- Pure/Impure</h3>
+            </section>
+        </section>
+
+        <!-- IX- Forms -->
+        <section>
+            <section>
+                <h1 class="text-warning">IX- Forms</h1>
+            </section>
+            <!-- IX- 1- Template-Driven Form (TD) vs. Reactive Form -->
+            <section>
+                <h3>IX- 1- Template-Driven Form (TD) vs. Reactive Form</h3>
+                <img src="assets/angular/tdvsreactive.png">
+            </section>
+        </section>
+
+        <!-- IX- 2- Template-Driven Form -->
+        <section>
+            <!-- IX- 2- Template-Driven Form -->
+            <section>
+                <h2 class="text-info">IX- 2- Template-Driven Form</h2>
+            </section>
+
+            <!-- IX- 2- a- Setup Template-Driven Form -->
+            <section>
+                <h3>IX- 2- a- Setup Template-Driven Form</h3>
+            </section>
+
+            <!-- IX- 2- b- Form state -->
+            <section>
+                <h3>IX- 2- b- Form state</h3>
+                <img src="assets/angular/controlstate.jpg">
+            </section>
+
+            <!-- IX- 2- c- Validation -->
+            <section>
+                <h3>IX- 2- c- Validation</h3>
+            </section>
+
+            <!-- IX- 2- d- Outputting validation error messages -->
+            <section>
+                <h3>IX- 2- d- Outputting validation error messages</h3>
+            </section>
+
+            <!-- IX- 2- e- Set default values with ngModel property binding -->
+            <section>
+                <h3>IX- 2- e- Set default values with ngModel property binding</h3>
+            </section>
+
+            <!-- IX- 2- f- ngGroupModel -->
+            <section>
+                <h3>IX- 2- f- ngGroupModel</h3>
+            </section>
+
+            <!-- IX- 2- g- setValue/patchValue -->
+            <section>
+                <h3>IX- 2- g- setValue/patchValue</h3>
+            </section>
+
+            <!-- IX- 2- h- Reset & Use the form -->
+            <section>
+                <h3>IX- 2- h- Reset & Use the form </h3>
+            </section>
+        </section>
+
+        <!-- IX- 3- Reactive Form -->
+        <section>
+            <!-- IX- 3- Reactive Form -->
+            <section>
+                <h2 class="text-info">IX- 2- Reactive Form</h2>
+            </section>
+
+            <!-- IX- 3- a- Setup reactive form -->
+            <section>
+                <h3>IX- 2- a- Setup reactive form</h3>
+            </section>
+
+            <!-- IX- 3- b- Syncing HTML with the Form -->
+            <section>
+                <h3>IX- 2- b- Syncing HTML with the Form</h3>
+            </section>
+
+            <!-- IX- 3- c- Validation -->
+            <section>
+                <h3>IX- 3- c- Validation</h3>
+            </section>
+
+            <!-- IX- 3- d- Getting access to controls -->
+            <section>
+                <h3>IX- 3- d- Getting Access to controls</h3>
+            </section>
+
+            <!-- IX- 3- e- Reactive grouping controls -->
+            <section>
+                <h3>IX- 3- e- Reactive grouping controls</h3>
+            </section>
+
+            <!-- IX- 3- f- Custom Async validators -->
+            <section>
+                <h3>IX- 3- f- Custom Async validators</h3>
+            </section>
+        </section>
+
+        <!-- X- Http & Firebase -->
+        <section>
+            <section>
+                <h1 class="text-warning">X- Http & Firebase</h1>
+            </section>-->
+
+            <!-- X- 1- HttpClient & Http verbs -->
+            <section>
+                <section>
+                    <h3>X- 1- HttpClient & Http verbs </h3>
+                    Check: <a href="https://www.positronx.io/angular-7-httpclient-http-service/" target="_blank">HttpClient</a>
+                </section>
+            </section>
+
+            <!-- X- 2- Interceptors -->
+            <section>
+                <section>
+                    <h3>X- 2- Interceptors </h3>
+                </section>
+            </section>
+        </section>
+
+        <!-- XI- Modules -->
+        <section>
+            <section>
+                <h1 class="text-warning">XI- Modules</h1>
+            </section>
+            <!-- X- 1- Introduction -->
+            <section>
+                <h3>X- 1- Introduction</h3>
+            </section>
+
+            <!-- XI- 2- Lazyload modules -->
+            <section>
+                <h3>XI- 2- Lazyload modules</h3>
+            </section>
+
+            <!-- XI- 3- Preloading Lazy Loaded Routes -->
+            <section>
+                <h3>XI- 3- Preloading Lazy Loaded Routes</h3>
+            </section>
+
+            <!-- XI- 4- JIT vs. AOT -->
+            <section>
+                <h3>XI- 4- JIT vs. AOT</h3>
+                Check: <a href="https://blogs.infinitesquare.com/posts/web/angular-jit-vs-aot" target="_blank">JIT vs. AOT</a>
+            </section>
+        </section>
+
+        <!-- XII- Deployment -->
+        <section>
+            <section>
+                <h1 class="text-warning">XII- Deployment</h1>
+            </section>
+
+            <!-- XII- 1- Introduction -->
+            <section>
+                <h3>XII- 1- Introduction</h3>
+            </section>
+
+            <!-- XII- 2- Deploying an Angular App -->
+            <section>
+                <h3>XII- 2- Deploying an Angular App</h3>
+                Check: <a href="https://medium.com/code-sketch/how-to-deploy-an-angular-7-app-to-github-pages-9427b609645f" target="_blank">How to deploy an Angular App</a>
+            </section>
+        </section>
+
+        <!-- XIII- Unit Testing -->
+        <section>
+            <section>
+                <h1 class="text-warning">XIII- Unit Testing</h1>
+            </section>
+
+            <!-- XIII- 1- Introduction -->
+            <section>
+                <h3>XIII- 1- Introduction</h3>
+            </section>
+
+            <!-- XIII- 2- TP -->
+            <section>
+                <h3>XIII- 2- Tutorial</h3>
+                Check: <a href="https://github.com/houdass/ng-test" target="_blank">Demo</a>
+            </section>
+        </section>
+
+        <!-- VII- ngStore -->
+        <section>
+            <section>
+                <h1 class="text-warning">ngStore</h1>
             </section>
             <section>
-                <h2>Implementations</h2>
+                <h3>VII- 1- Introduction</h3>
+                <p>ngStore is RxJS powered state management for Angular applications, inspired by Redux.</p>
+            </section>
+            <section>
+                <h3>VII- 2- Implementations</h3>
                 <ul>
                     <li>@ngrx/store</li>
                     <li>ng2-redux</li>
@@ -390,475 +912,56 @@
                 </ul>
             </section>
             <section>
-                <h3>npm i -S @ngrx/store</h3>
+                <h3>VII- 3- Getting Started</h3>
+                <pre><code>npm i -S @ngrx/store</code></pre>
             </section>
             <section>
-                <h3>npm i -S @ngrx/store-devtools</h3>
-                <p>@ngrx/store-devtools instruments your store letting you use a powerful time-travelling debugger.</p>
+                <h3>VII- 4- Reducers</h3>
+                <p class="text-left">Pure functions called reducers take the previous state and the next action to compute the new
+                    state.</p>
+                <p class="text-left">Reducers specify how the application's state changes in response to actions sent to the store.</p>
             </section>
             <section>
-                <h3>npm i -S @ngrx/entity</h3>
-                <p>@ngrx/entity provides an API to manipulate and query entity collections.</p>
+                <h3>VII- 5- Actions</h3>
+                <p class="text-left">Actions describe state changes</p>
+                <p class="text-left">Remember that actions only describe what happened, but don't describe how the application's state changes.
+                </p>
             </section>
             <section>
-                <h3>npm i -S @ngrx/router-store</h3>
-                <p>Keeps the state of @angular/router in your store.</p>
+                <h3>VII- 6- Store Devtools</h3>
+                <p>@ngrx/store-devtools instruments your store letting you use a powerful time-travelling debugger</p>
+                <pre><code>npm i -S @ngrx/store-devtools</code></pre>
             </section>
             <section>
-                <h3>npm i -S @ngrx/effects</h3>
-                <p>Isolates side effects from your UI by expressing side effects as sources of actions.</p>
+                <h3>VII- 7- Entity</h3>
+                <p>@ngrx/entity provides an API to manipulate and query entity collections</p>
+                <pre><code>npm i -S @ngrx/entity</code></pre>
             </section>
             <section>
-                <h3>Actions</h3>
-                <p>Actions describe state changes.</p>
+                <h3>VII- 8- Router</h3>
+                <p>Keeps the state of @angular/router in your store</p>
+                <pre><code>npm i -S @ngrx/router-store</code></pre>
             </section>
             <section>
-                <h3>Reducers</h3>
-                <p>Pure functions called reducers take the previous state and the next action to compute the new state.</p>
-                <p>Reducers specify how the application's state changes in response to actions sent to the store.</p>
-                <p>Remember that actions only describe what happened, but don't describe how the application's state changes.</p>
+                <h3>VII- 9- Effects</h3>
+                <p>Isolates side effects from your UI by expressing side effects as sources of actions</p>
+                <pre><code>npm i -S @ngrx/effects</code></pre>
             </section>
             <section>
-                <h3>NgRx Schematics</h3>
+                <h3>VII- 10- NgRx Schematics</h3>
                 <ul>
-                    <li>ng config cli.defaultCollection @ngrx/schematics</li>
-                    <li>npm i -D @ngrx/schematics</li>
-                    <li>ng generate entity --name User --module somewhere/somewhere.module.ts</li>
-                    <li>https://github.com/ngrx/platform/tree/master/docs/</li>
+                    <li><pre><code>ng config cli.defaultCollection @ngrx/schematics</code></pre></li>
+                    <li><pre><code>npm i -D @ngrx/schematics</code></pre></li>
+                    <li><pre><code>ng generate entity --name User --module somewhere/somewhere.module.ts</code></pre></li>
+                    <li><pre><code>https://github.com/ngrx/platform/tree/master/docs/</code></pre></li>
                 </ul>
             </section>
             <section>
-                <h3>Dependencies</h3>
-                <p>npm i @ngrx/{store,effects,entity,store-devtools} -S</p>
+                <h3>VII- 11- Dependencies</h3>
+                <pre><code>npm i @ngrx/{store,effects,entity,store-devtools} -S</code></pre>
             </section>
         </section>
-        <section>
-            <section>
-                <h3>Coveralls</h3>
-                <p>
-                    Works with continuous integration servers to provide test coverage history and statistics.
-                </p>
-                <img src="assets/logos/coveralls.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://coveralls.io/">https://coveralls.io/</a>
-                </p>
-            </section>
-            <section>
-                <h3>Coveralls repository dashboard</h3>
-                <img src="assets/screenshots/coveralls02.png"/>
-            </section>
-            <section>
-                <h3>Coverage of latest builds of a repo</h3>
-                <img src="assets/screenshots/coveralls03.png"/>
-            </section>
-            <section>
-                <h3>Coverage per file for specific build</h3>
-                <img src="assets/screenshots/coveralls04.png"/>
-            </section>
-            <section>
-                <h3>Drilldown into file coverage</h3>
-                <img src="assets/screenshots/coveralls05.png"/>
-            </section>
-            <section>
-                <h3>Integration into PR overview screen</h3>
-                <img src="assets/screenshots/coveralls08.png"/>
-            </section>
-            <section>
-                <h3>Passing test results to Coveralls</h3>
-                <img src="assets/screenshots/coveralls01.png"/>
-            </section>
-            <section>
-                <h3>Setup NMA email* on any coverage drop</h3>
-                <img src="assets/screenshots/coveralls06.png"/>
-                <p>
-                    <small>For each new API key <a href="http://www.notifymyandroid.com/nmamail.jsp">NMA automatically creates an email address</a> <code>apikey@nmamail.net</code> that can be used for custom notifications.</small>
-                </p>
-            </section>
-            <section>
-                <h3>Notification on a (<a href="https://github.com/bkimminich/kata-tcg/commit/b2213b083457c6f7ea4e2fa2034fdc504390555b">forged</a>) coverage drop</h3>
-                <img src="assets/screenshots/coveralls07.png"/>
-            </section>
-        </section>
-<!--
-        <section>
-            <section>
-                <h3>Coverity</h3>
-                <p>
-                    Provides software quality and security testing solutions.
-                </p>
-                <img src="assets/logos/Coverity-Logo.jpg" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="http://www.coverity.com/">http://www.coverity.com/</a>
-                </p>
-            </section>
-            <section>
-                <h3>Coverity's Analysis Dashboard</h3>
-                <img src="assets/screenshots/coverity03.png"/>
-            </section>
-            <section>
-                <h3>Details on a specific issue</h3>
-                <img src="assets/screenshots/coverity02.png"/>
-            </section>
-            <section>
-                <h3>Coverity scan setup on a separate branch</h3>
-                <img src="assets/screenshots/coverity01.png"/>
-                <p>
-                    <small>Coverity <a href="https://scan.coverity.com/faq#frequency">limits the build submission frequency</a> to 1-3 builds/day (and 2-12 builds/week) depending the project's LOC.</small>
-                </p>
-            </section>
-        </section>
--->
-        <section>
-            <section>
-                <h3>Codeclimate</h3>
-                <p>
-                    Automated code review for Ruby, JS, and PHP providing feedback on code quality and test coverage.
-                </p>
-                <img src="assets/logos/codeclimate.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://codeclimate.com/">https://codeclimate.com/</a>
-                </p>
-            </section>
-            <section>
-                <h3>Quality overview in Codeclimate Feed</h3>
-                <img src="assets/screenshots/codeclimate01.png"/>
-            </section>
-            <section>
-                <h3>Quality metrics and test coverage per file</h3>
-                <img src="assets/screenshots/codeclimate02.png"/>
-            </section>
-            <section>
-                <h3>Code smells identified by Codeclimate</h3>
-                <img src="assets/screenshots/codeclimate03.png"/>
-            </section>
-            <section>
-                <h3>Coverage details show a missed function</h3>
-                <img src="assets/screenshots/codeclimate05.png"/>
-            </section>
-            <section>
-                <h3>Send merged <a href="http://ltp.sourceforge.net/coverage/lcov.php">LCOV</a> data to Codeclimate</h3>
-                <img src="assets/screenshots/codeclimate06.png"/>
-            </section>
-            <section>
-                <h3>Automatically open issues for code smells</h3>
-                <img src="assets/screenshots/codeclimate07.png"/>
-            </section>
-            <section>
-                <h3>Refactoring issue created by Codeclimate</h3>
-                <img src="assets/screenshots/codeclimate08.png"/>
-            </section>
-        </section>
-
-        <section>
-            <h2>Dependency Management</h2>
-            <img src="assets/octocats/momtocat.png" width="400" style="background: rgba(255, 255, 255, 1)"/>
-        </section>
-        <section>
-            <section>
-                <h3>Versioneye</h3>
-                <p>
-                    Notification System for Software Libraries showing outdated dependencies in different supported project files.
-                </p>
-                <img src="assets/logos/versioneye.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://www.versioneye.com/">https://www.versioneye.com/</a>
-                </p>
-            </section>
-            <section>
-                <h3>Versioneye Project Overview</h3>
-                <img src="assets/screenshots/versioneye01.png"/>
-                <p>
-                    <small>Supported Languages: Java - Ruby - Python - PHP - Node.js - JS - Objective-C - Clojure - CSS - R</small>
-                </p>
-            </section>
-            <section>
-                <h3>Dependency details on project level</h3>
-                <img src="assets/screenshots/versioneye02.png"/>
-            </section>
-            <section>
-                <h3>Graph with all indirect dependencies</h3>
-                <img src="assets/screenshots/versioneye03.png"/>
-                <p>
-                    <small><a href="https://www.versioneye.com/user/projects/544a3040c310f96cf00000fa/visual">This graph</a> shows all the dependencies brought into the JS implementation of kata-tcg by the used testing libraries!</small>
-                </p>
-            </section>
-        </section>
-        <section>
-            <section>
-                <h3>Gemnasium</h3>
-                <p>
-                    Monitoring of project dependencies and alerts for updates and security vulnerabilities.
-                </p>
-                <img src="assets/logos/gemnasium_logo-big.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://gemnasium.com/">https://gemnasium.com/</a>
-                </p>
-            </section>
-            <section>
-                <h3>Dependency status overview for all repos</h3>
-                <img src="assets/screenshots/gemnasium01.png"/>
-            </section>
-            <section>
-                <h3>Outdated Jasmine test dependencies</h3>
-                <img src="assets/screenshots/gemnasium02.png"/>
-            </section>
-            <section>
-                <h3>Email with security alert</h3>
-                <img src="assets/screenshots/gemnasium03.png"/>
-            </section>
-        </section>
-<!--
-        <section>
-            <section>
-                <h3>David-DM</h3>
-                <p>
-                    Watching your <a href="http://nodejs.org/">Node</a> dependencies.
-                </p>
-                <img src="assets/logos/david.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://david-dm.org/">https://david-dm.org/</a>
-                </p>
-            </section>
-            <section>
-                <h3>Automatically discovered Node.js projects</h3>
-                <img src="assets/screenshots/daviddm01.png"/>
-                <p>
-                    <small>Unfortunately David-DM (v9.0.0) can only discover Node.js projects with a <code>package.json</code> in the repository root folder.</small>
-                </p>
-            </section>
-            <section>
-                <h3>Dependency status with security advisory</h3>
-                <img src="assets/screenshots/daviddm02.png"/>
-                <p>
-                    <small>A module without security warnings might still contain undiscovered vulnerabilities! On the other hand proven vulnerabilities of a module might be irrelevant in the context it is used in.</small>
-                </p>
-            </section>
-            <section>
-                <h3>Security vulnerability details</h3>
-                <img src="assets/screenshots/daviddm03.png"/>
-                <p>
-                    <small>David-DM cooperates with <a href="https://nodesecurity.io">Node Security Project</a> to determine and link to vulnerabilities.</small>
-                </p>
-            </section>
-        </section>
--->
-
-        <section>
-            <h2>Continuous Deployment</h2>
-            <img src="assets/octocats/constructocat2.jpg" width="400" style="background: rgba(255, 255, 255, 1)"/>
-        </section>
-        <section>
-            <section>
-                <h3>Heroku</h3>
-                <p>
-                    Build and Run Your Apps, Your Way.
-                </p>
-                <img src="assets/logos/logotype-heroku.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://www.heroku.com/">https://www.heroku.com/</a>
-                </p>
-            </section>
-            <section>
-                <h3><a href="https://juice-shop.herokuapp.com">Heroku instance</a> of Juice Shop</h3>
-                <img src="assets/screenshots/heroku01.png"/>
-                <p>
-                    <small>Heroku <a href="https://devcenter.heroku.com/articles/usage-and-billing#750-free-dyno-hours-per-app">offers a free small instance per personal application</a>.</small>
-                </p>
-            </section>
-            <section>
-                <h3>Application status dashboard</h3>
-                <img src="assets/screenshots/heroku02.png"/>
-                <p>
-                    <small>Heroku supports Ruby, Node.js, Python, Java, and PHP.</small>
-                </p>
-            </section>
-            <section>
-                <h3>Application deployment history</h3>
-                <img src="assets/screenshots/heroku03.png"/>
-            </section>
-            <section>
-                <h3>Setting up deployment in <code>.travis.yml</code></h3>
-                <img src="assets/screenshots/heroku04.png"/>
-                <p>
-                    <small>By default only a successful build of the <code>master</code> branch triggers a deployment.</small>
-                </p>
-            </section>
-        </section>
-        <section>
-            <section>
-                <h3>Docker</h3>
-                <p>
-                    Open platform for distributed applications for developers and sysadmins.
-                </p>
-                <img src="assets/logos/docker.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://docker.com/">https://docker.com/</a>
-                </p>
-            </section>
-            <section>
-                <h3>Autobuild Repository on <a href="https://hub.docker.com/">Docker Hub</a></h3>
-                <img src="assets/screenshots/docker01.png"/>
-            </section>
-            <section>
-                <h3>Activated Docker Service Hook on GitHub</h3>
-                <img src="assets/screenshots/docker02.png"/>
-            </section>
-            <section>
-                <h3>The <code>Dockerfile</code> of Juice Shop</h3>
-                <img src="assets/screenshots/docker03.png"/>
-            </section>
-        </section>
-
-        <section>
-            <h2>Collaboration</h2>
-            <img src="assets/octocats/collabocats.jpg" width="400" style="background: rgba(255, 255, 255, 1)"/>
-        </section>
-        <section>
-            <section>
-                <h3>HuBoard</h3>
-                <p>
-                    Lightweight Kanban Board offering instant project management for GitHub issues.
-                </p>
-                <img src="assets/logos/HuBoardSplash.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://huboard.com/">https://huboard.com/</a>
-                </p>
-            </section>
-            <section>
-                <h3>Kanban Board based on GitHub issues</h3>
-                <img src="assets/screenshots/huboard01.png"/>
-            </section>
-            <section>
-                <h3>DnD for priorization and process flow</h3>
-                <img src="assets/screenshots/huboard02.png"/>
-            </section>
-            <section>
-                <h3>Simple creation and tagging of story cards</h3>
-                <img src="assets/screenshots/huboard03.png"/>
-            </section>
-            <section>
-                <h3>Authorizing access to GitHub repos</h3>
-                <img src="assets/screenshots/huboard06.png"/>
-            </section>
-            <section>
-                <h3>Let HuBoard setup the GitHub integration</h3>
-                <img src="assets/screenshots/huboard07.png"/>
-            </section>
-            <section>
-                <h3>Service Hook generated by HuBoard</h3>
-                <img src="assets/screenshots/huboard05.png"/>
-            </section>
-        </section>
-        <section>
-            <section>
-                <h3>Bountysource</h3>
-                <p>
-                    Funding platform for open-source software where users can create/collect bounties and pledge to fundraisers.
-                </p>
-                <img src="assets/logos/Bountysource-square-100.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://www.bountysource.com/">https://www.bountysource.com/</a>
-                </p>
-            </section>
-            <section>
-                <h3>Overview of issues to place bounties on</h3>
-                <img src="assets/screenshots/bountysource01.png"/>
-            </section>
-            <section>
-                <h3>Picking <a href="https://www.bountysource.com/issues/7953454-new-logo-for-juice-shop">an issue</a> to place a bounty on</h3>
-                <img src="assets/screenshots/bountysource02.png"/>
-            </section>
-            <section>
-                <h3>Placing a 10$ bounty for a new logo</h3>
-                <img src="assets/screenshots/bountysource03.png"/>
-            </section>
-            <section>
-                <h3>The new bounty in the Activity feed</h3>
-                <img src="assets/screenshots/bountysource05.png"/>
-            </section>
-            <section>
-                <h3>Issue augmented with bounty information</h3>
-                <img src="assets/screenshots/bountysource06.png"/>
-            </section>
-            <section>
-                <h3>Developer starting to work on issue</h3>
-                <img src="assets/screenshots/bountysource07.png"/>
-            </section>
-            <section>
-                <h3>Developer claims bounty for closed issue</h3>
-                <img src="assets/screenshots/bountysource08.png"/>
-            </section>
-            <section>
-                <h3>Approved and paid bounty for <a href="https://raw.githubusercontent.com/bkimminich/juice-shop/master/app/public/images/JuiceShop_Logo.png">new logo</a></h3>
-                <img src="assets/screenshots/bountysource09.png"/>
-            </section>
-        </section>
-        <section>
-            <section>
-                <h3>Gitter</h3>
-                <p>
-                    Chat. For GitHub.
-                </p>
-                <img src="assets/logos/Gitter.png" width="200" style="background: none; border:none; box-shadow:none;"/>
-                <p>
-                    <a href="https://gitter.im/">https://gitter.im/</a>
-                </p>
-            </section>
-            <section>
-                <h3>The official <a href="https://gitter.im/bkimminich/juice-shop">Gitter chatroom of Juice-Shop</a></h3>
-                <img src="assets/screenshots/gitter01.png"/>
-                <p>
-                    <small>Disclaimer: Chatroom might appear more desolated on screenshot than in reality.</small>
-                </p>
-            </section>
-            <section>
-                <h3>Activity sidebar populated via WebHooks</h3>
-                <img src="assets/screenshots/gitter02.png"/>
-            </section>
-            <section>
-                <h3>GitHub-side of the Gitter-WebHook</h3>
-                <img src="assets/screenshots/gitter03.png"/>
-                <p>
-                    <small>With granted repository access Gitter will setup its WebHook on GitHub automatically.</small>
-                </p>
-            </section>
-        </section>
-
-        <section>
-            <section>
-                <h2>One final takeaway</h2>
-                <p>
-                    If the services you are using offer <span style="background: rgba(103, 103, 103, 1)">&nbsp;status&nbsp;</span><span style="background: rgba(216, 100, 78, 1)">&nbsp;badges&nbsp;</span> for your <code>README.md</code>...
-                </p>
-                <br>
-                <h1 class="fragment">
-                    ...<span style="background: rgba(103, 103, 103, 1)">&nbsp;use&nbsp;</span><span style="background: rgba(215, 176, 38, 1)">&nbsp;them&nbsp;</span>...
-                </h1>
-                <br>
-                <h3 class="fragment">
-                    ...on <span style="background: rgba(103, 103, 103, 1)">&nbsp;every&nbsp;</span><span style="background: rgba(89, 199, 48, 1)">&nbsp;occasion&nbsp;</span>...
-                </h3>
-            </section>
-            <section>
-                <h2>...because they are <span style="background: rgba(103, 103, 103, 1)">&nbsp;just&nbsp;</span><span style="background: rgba(34, 136, 194, 1)">&nbsp;cool&nbsp;</span>!</h2>
-                <img src="assets/screenshots/badges01.png" height="190"/>
-                <img src="assets/screenshots/badges02.png" height="190"/>
-            </section>
-        </section>
-
-        <section>
-            <section>
-                <h1>Merci de votre attention!</h1>
-                <h3>by <span style="background: rgba(103, 103, 103, 1)">&nbsp;Youness&nbsp;</span><span style="background: rgba(244, 129, 66, 1)">&nbsp;Houdass&nbsp;</span> / houdass.com</h3>
-            </section>
-            <section>
-                <h1>Q&amp;A</h1>
-                <img src="assets/angular/6.gif" width="400" style="background: none; border:none; box-shadow:none;"/>
-            </section>
-        </section>
-
     </div>
-
 </div>
 
 <script src="lib/js/head.min.js"></script>
@@ -947,20 +1050,6 @@
             "PAAS Provider-->User: Running Instance\n"
     );
     serviceChainDiagram.drawSVG("serviceChainDiagram", {theme: 'hand'});
-
 </script>
-
-<div class="hidden-mobile">
-    <div style="display: block; position: absolute; bottom: 14px; left: 50%; margin-left: -230px; z-index: 20;">
-        <a href="https://twitter.com/bkimminich" class="twitter-follow-button" data-show-count="false">Follow @bkimminich</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://github-service-universe.kimminich.de" data-text="Exploring the @GitHub Service Universe (presented at @JavaLandConf and @Clean_Code_Days 2015)" data-via="bkimminich">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        <iframe src="https://ghbtns.com/github-btn.html?user=bkimminich&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-        <iframe src="https://ghbtns.com/github-btn.html?user=bkimminich&repo=github-service-universe&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-    </div>
-</div>
-
-
 </body>
 </html>
